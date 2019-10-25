@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 # Install script for directory: /home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
   set(CMAKE_INSTALL_PREFIX "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/install/cpp_pubsub")
+=======
+# Install script for directory: /home/portia/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub
+
+# Set the install prefix
+if(NOT DEFINED CMAKE_INSTALL_PREFIX)
+  set(CMAKE_INSTALL_PREFIX "/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/cpp_pubsub")
+>>>>>>> 2bfd020d511dce9e8de31ce95719fda3d0662758
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -38,7 +46,11 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+<<<<<<< HEAD
   include("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+=======
+  include("/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/ament_cmake_symlink_install/ament_cmake_symlink_install.cmake")
+>>>>>>> 2bfd020d511dce9e8de31ce95719fda3d0662758
 endif()
 
 if(CMAKE_INSTALL_COMPONENT)
@@ -49,5 +61,9 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
+<<<<<<< HEAD
 file(WRITE "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/${CMAKE_INSTALL_MANIFEST}"
+=======
+file(WRITE "/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/${CMAKE_INSTALL_MANIFEST}"
+>>>>>>> 2bfd020d511dce9e8de31ce95719fda3d0662758
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

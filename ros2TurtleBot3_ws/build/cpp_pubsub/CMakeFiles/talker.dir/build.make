@@ -43,10 +43,17 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub
+=======
+CMAKE_SOURCE_DIR = /home/portia/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub
+>>>>>>> 2bfd020d511dce9e8de31ce95719fda3d0662758
 
 # Include any dependencies generated for this target.
 include CMakeFiles/talker.dir/depend.make
@@ -58,6 +65,7 @@ include CMakeFiles/talker.dir/progress.make
 include CMakeFiles/talker.dir/flags.make
 
 CMakeFiles/talker.dir/src/publisher_member_function.cpp.o: CMakeFiles/talker.dir/flags.make
+<<<<<<< HEAD
 CMakeFiles/talker.dir/src/publisher_member_function.cpp.o: /home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub/src/publisher_member_function.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/talker.dir/src/publisher_member_function.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/talker.dir/src/publisher_member_function.cpp.o -c /home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub/src/publisher_member_function.cpp
@@ -69,6 +77,19 @@ CMakeFiles/talker.dir/src/publisher_member_function.cpp.i: cmake_force
 CMakeFiles/talker.dir/src/publisher_member_function.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/talker.dir/src/publisher_member_function.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub/src/publisher_member_function.cpp -o CMakeFiles/talker.dir/src/publisher_member_function.cpp.s
+=======
+CMakeFiles/talker.dir/src/publisher_member_function.cpp.o: /home/portia/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub/src/publisher_member_function.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/talker.dir/src/publisher_member_function.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/talker.dir/src/publisher_member_function.cpp.o -c /home/portia/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub/src/publisher_member_function.cpp
+
+CMakeFiles/talker.dir/src/publisher_member_function.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/talker.dir/src/publisher_member_function.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/portia/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub/src/publisher_member_function.cpp > CMakeFiles/talker.dir/src/publisher_member_function.cpp.i
+
+CMakeFiles/talker.dir/src/publisher_member_function.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/talker.dir/src/publisher_member_function.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/portia/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub/src/publisher_member_function.cpp -o CMakeFiles/talker.dir/src/publisher_member_function.cpp.s
+>>>>>>> 2bfd020d511dce9e8de31ce95719fda3d0662758
 
 CMakeFiles/talker.dir/src/publisher_member_function.cpp.o.requires:
 
@@ -94,8 +115,13 @@ talker: /opt/ros/dashing/lib/librclcpp.so
 talker: /opt/ros/dashing/lib/librcl.so
 talker: /opt/ros/dashing/lib/librcl_interfaces__rosidl_typesupport_c.so
 talker: /opt/ros/dashing/lib/librcl_interfaces__rosidl_typesupport_cpp.so
+<<<<<<< HEAD
 talker: /opt/ros/dashing/lib/librcl_interfaces__rosidl_generator_c.so
 talker: /opt/ros/dashing/lib/librcl_interfaces__rosidl_typesupport_fastrtps_c.so
+=======
+talker: /opt/ros/dashing/lib/librcl_interfaces__rosidl_typesupport_fastrtps_c.so
+talker: /opt/ros/dashing/lib/librcl_interfaces__rosidl_generator_c.so
+>>>>>>> 2bfd020d511dce9e8de31ce95719fda3d0662758
 talker: /opt/ros/dashing/lib/librcl_interfaces__rosidl_typesupport_fastrtps_cpp.so
 talker: /opt/ros/dashing/lib/librcl_interfaces__rosidl_typesupport_introspection_c.so
 talker: /opt/ros/dashing/lib/librcl_interfaces__rosidl_typesupport_introspection_cpp.so
@@ -113,8 +139,13 @@ talker: /opt/ros/dashing/lib/librosgraph_msgs__rosidl_typesupport_fastrtps_cpp.s
 talker: /opt/ros/dashing/lib/librcl_yaml_param_parser.so
 talker: /opt/ros/dashing/lib/libbuiltin_interfaces__rosidl_typesupport_c.so
 talker: /opt/ros/dashing/lib/libbuiltin_interfaces__rosidl_typesupport_cpp.so
+<<<<<<< HEAD
 talker: /opt/ros/dashing/lib/libbuiltin_interfaces__rosidl_generator_c.so
 talker: /opt/ros/dashing/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_c.so
+=======
+talker: /opt/ros/dashing/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_c.so
+talker: /opt/ros/dashing/lib/libbuiltin_interfaces__rosidl_generator_c.so
+>>>>>>> 2bfd020d511dce9e8de31ce95719fda3d0662758
 talker: /opt/ros/dashing/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_cpp.so
 talker: /opt/ros/dashing/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so
 talker: /opt/ros/dashing/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so
@@ -131,7 +162,11 @@ talker: /opt/ros/dashing/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.s
 talker: /opt/ros/dashing/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so
 talker: /opt/ros/dashing/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so
 talker: CMakeFiles/talker.dir/link.txt
+<<<<<<< HEAD
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable talker"
+=======
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable talker"
+>>>>>>> 2bfd020d511dce9e8de31ce95719fda3d0662758
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/talker.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -148,6 +183,10 @@ CMakeFiles/talker.dir/clean:
 .PHONY : CMakeFiles/talker.dir/clean
 
 CMakeFiles/talker.dir/depend:
+<<<<<<< HEAD
 	cd /home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub /home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub /home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub /home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub /home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles/talker.dir/DependInfo.cmake --color=$(COLOR)
+=======
+	cd /home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/portia/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub /home/portia/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub /home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub /home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub /home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles/talker.dir/DependInfo.cmake --color=$(COLOR)
+>>>>>>> 2bfd020d511dce9e8de31ce95719fda3d0662758
 .PHONY : CMakeFiles/talker.dir/depend
 

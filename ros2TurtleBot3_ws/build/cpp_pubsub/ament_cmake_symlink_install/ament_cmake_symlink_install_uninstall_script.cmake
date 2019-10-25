@@ -1,7 +1,11 @@
 # generated from
 # ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install_uninstall_script.cmake.in
 
+<<<<<<< HEAD
 set(install_manifest "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/symlink_install_manifest.txt")
+=======
+set(install_manifest "/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/symlink_install_manifest.txt")
+>>>>>>> 2bfd020d511dce9e8de31ce95719fda3d0662758
 if(NOT EXISTS "${install_manifest}")
   message(FATAL_ERROR "Cannot find symlink install manifest: ${install_manifest}")
 endif()

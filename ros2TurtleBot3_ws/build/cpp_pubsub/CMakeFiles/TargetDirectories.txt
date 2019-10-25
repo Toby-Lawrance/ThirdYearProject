@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles/install/strip.dir
 /home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles/install.dir
 /home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles/list_install_components.dir
@@ -8,3 +9,15 @@
 /home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles/install/local.dir
 /home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles/test.dir
 /home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles/edit_cache.dir
+=======
+/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles/install/strip.dir
+/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles/install.dir
+/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles/list_install_components.dir
+/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles/talker.dir
+/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles/uninstall.dir
+/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles/listener.dir
+/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles/rebuild_cache.dir
+/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles/install/local.dir
+/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles/test.dir
+/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles/edit_cache.dir
+>>>>>>> 2bfd020d511dce9e8de31ce95719fda3d0662758

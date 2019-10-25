@@ -45,7 +45,11 @@ set(CMAKE_C_LINKER_PREFERENCE 10)
 # Save compiler ABI information.
 set(CMAKE_C_SIZEOF_DATA_PTR "8")
 set(CMAKE_C_COMPILER_ABI "ELF")
+<<<<<<< HEAD
 set(CMAKE_C_LIBRARY_ARCHITECTURE "x86_64-linux-gnu")
+=======
+set(CMAKE_C_LIBRARY_ARCHITECTURE "aarch64-linux-gnu")
+>>>>>>> 2bfd020d511dce9e8de31ce95719fda3d0662758
 
 if(CMAKE_C_SIZEOF_DATA_PTR)
   set(CMAKE_SIZEOF_VOID_P "${CMAKE_C_SIZEOF_DATA_PTR}")
@@ -56,7 +60,11 @@ if(CMAKE_C_COMPILER_ABI)
 endif()
 
 if(CMAKE_C_LIBRARY_ARCHITECTURE)
+<<<<<<< HEAD
   set(CMAKE_LIBRARY_ARCHITECTURE "x86_64-linux-gnu")
+=======
+  set(CMAKE_LIBRARY_ARCHITECTURE "aarch64-linux-gnu")
+>>>>>>> 2bfd020d511dce9e8de31ce95719fda3d0662758
 endif()
 
 set(CMAKE_C_CL_SHOWINCLUDES_PREFIX "")
@@ -69,5 +77,9 @@ endif()
 
 
 set(CMAKE_C_IMPLICIT_LINK_LIBRARIES "gcc;gcc_s;c;gcc;gcc_s")
+<<<<<<< HEAD
 set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "/usr/lib/gcc/x86_64-linux-gnu/7;/usr/lib/x86_64-linux-gnu;/usr/lib;/lib/x86_64-linux-gnu;/lib")
+=======
+set(CMAKE_C_IMPLICIT_LINK_DIRECTORIES "/usr/lib/gcc/aarch64-linux-gnu/7;/usr/lib/aarch64-linux-gnu;/usr/lib;/lib/aarch64-linux-gnu;/lib")
+>>>>>>> 2bfd020d511dce9e8de31ce95719fda3d0662758
 set(CMAKE_C_IMPLICIT_LINK_FRAMEWORK_DIRECTORIES "")

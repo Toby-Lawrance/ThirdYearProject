@@ -2,7 +2,11 @@
 # ament_cmake_core/cmake/uninstall_target/ament_cmake_uninstall_target.cmake.in
 
 function(ament_cmake_uninstall_target_remove_empty_directories path)
+<<<<<<< HEAD
   set(install_space "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/install/cpp_pubsub")
+=======
+  set(install_space "/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/cpp_pubsub")
+>>>>>>> 2bfd020d511dce9e8de31ce95719fda3d0662758
   if(install_space STREQUAL "")
     message(FATAL_ERROR "The CMAKE_INSTALL_PREFIX variable must not be empty")
   endif()
@@ -29,7 +33,11 @@ function(ament_cmake_uninstall_target_remove_empty_directories path)
 endfunction()
 
 # uninstall files installed using the standard install() function
+<<<<<<< HEAD
 set(install_manifest "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/install_manifest.txt")
+=======
+set(install_manifest "/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/install_manifest.txt")
+>>>>>>> 2bfd020d511dce9e8de31ce95719fda3d0662758
 if(NOT EXISTS "${install_manifest}")
   message(FATAL_ERROR "Cannot find install manifest: ${install_manifest}")
 endif()
@@ -57,4 +65,8 @@ message(STATUS "Execute custom uninstall script")
 # begin of custom uninstall code
 
 # uninstall files installed using the symlink install functions
+<<<<<<< HEAD
 include("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/ament_cmake_symlink_install/ament_cmake_symlink_install_uninstall_script.cmake")
+=======
+include("/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/ament_cmake_symlink_install/ament_cmake_symlink_install_uninstall_script.cmake")
+>>>>>>> 2bfd020d511dce9e8de31ce95719fda3d0662758

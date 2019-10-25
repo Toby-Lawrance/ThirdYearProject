@@ -1,0 +1,10 @@
+/home/portia/ThirdYearProject/ros2OnBot_ws/build/cpp_pubsub/CMakeFiles/install/strip.dir
+/home/portia/ThirdYearProject/ros2OnBot_ws/build/cpp_pubsub/CMakeFiles/install.dir
+/home/portia/ThirdYearProject/ros2OnBot_ws/build/cpp_pubsub/CMakeFiles/list_install_components.dir
+/home/portia/ThirdYearProject/ros2OnBot_ws/build/cpp_pubsub/CMakeFiles/talker.dir
+/home/portia/ThirdYearProject/ros2OnBot_ws/build/cpp_pubsub/CMakeFiles/uninstall.dir
+/home/portia/ThirdYearProject/ros2OnBot_ws/build/cpp_pubsub/CMakeFiles/listener.dir
+/home/portia/ThirdYearProject/ros2OnBot_ws/build/cpp_pubsub/CMakeFiles/rebuild_cache.dir
+/home/portia/ThirdYearProject/ros2OnBot_ws/build/cpp_pubsub/CMakeFiles/install/local.dir
+/home/portia/ThirdYearProject/ros2OnBot_ws/build/cpp_pubsub/CMakeFiles/test.dir
+/home/portia/ThirdYearProject/ros2OnBot_ws/build/cpp_pubsub/CMakeFiles/edit_cache.dir

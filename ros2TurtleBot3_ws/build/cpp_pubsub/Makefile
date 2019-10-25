@@ -48,10 +48,17 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
+<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub
+=======
+CMAKE_SOURCE_DIR = /home/portia/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub
+
+# The top-level build directory on which CMake was run.
+CMAKE_BINARY_DIR = /home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub
+>>>>>>> 2bfd020d511dce9e8de31ce95719fda3d0662758
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -137,9 +144,15 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
+<<<<<<< HEAD
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles /home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles 0
+=======
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles /home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles/progress.marks
+	$(MAKE) -f CMakeFiles/Makefile2 all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles 0
+>>>>>>> 2bfd020d511dce9e8de31ce95719fda3d0662758
 .PHONY : all
 
 # The main clean target

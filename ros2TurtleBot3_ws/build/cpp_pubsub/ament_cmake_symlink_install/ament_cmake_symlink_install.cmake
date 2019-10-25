@@ -23,7 +23,11 @@ function(ament_cmake_symlink_install_directory cmake_current_source_dir)
 
   # make destination absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
+<<<<<<< HEAD
     set(ARG_DESTINATION "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/install/cpp_pubsub/${ARG_DESTINATION}")
+=======
+    set(ARG_DESTINATION "/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/cpp_pubsub/${ARG_DESTINATION}")
+>>>>>>> 2bfd020d511dce9e8de31ce95719fda3d0662758
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -123,7 +127,11 @@ function(ament_cmake_symlink_install_files cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
+<<<<<<< HEAD
     set(ARG_DESTINATION "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/install/cpp_pubsub/${ARG_DESTINATION}")
+=======
+    set(ARG_DESTINATION "/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/cpp_pubsub/${ARG_DESTINATION}")
+>>>>>>> 2bfd020d511dce9e8de31ce95719fda3d0662758
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -181,7 +189,11 @@ function(ament_cmake_symlink_install_programs cmake_current_source_dir)
 
   # make destination an absolute path and ensure that it exists
   if(NOT IS_ABSOLUTE "${ARG_DESTINATION}")
+<<<<<<< HEAD
     set(ARG_DESTINATION "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/install/cpp_pubsub/${ARG_DESTINATION}")
+=======
+    set(ARG_DESTINATION "/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/cpp_pubsub/${ARG_DESTINATION}")
+>>>>>>> 2bfd020d511dce9e8de31ce95719fda3d0662758
   endif()
   if(NOT EXISTS "${ARG_DESTINATION}")
     file(MAKE_DIRECTORY "${ARG_DESTINATION}")
@@ -251,7 +263,11 @@ function(ament_cmake_symlink_install_targets)
 
     # make destination an absolute path and ensure that it exists
     if(NOT IS_ABSOLUTE "${destination}")
+<<<<<<< HEAD
       set(destination "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/install/cpp_pubsub/${destination}")
+=======
+      set(destination "/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/cpp_pubsub/${destination}")
+>>>>>>> 2bfd020d511dce9e8de31ce95719fda3d0662758
     endif()
     if(NOT EXISTS "${destination}")
       file(MAKE_DIRECTORY "${destination}")
@@ -310,6 +326,7 @@ message(STATUS "Execute custom install script")
 
 # begin of custom install code
 
+<<<<<<< HEAD
 # install(FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/cpp_pubsub" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/cpp_pubsub" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
@@ -342,3 +359,37 @@ ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws
 
 # install("TARGETS" "talker" "listener" "DESTINATION" "lib/cpp_pubsub")
 include("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+=======
+# install(FILES "/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/cpp_pubsub" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/home/portia/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub" FILES "/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/cpp_pubsub" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+
+# install(FILES "/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/cpp_pubsub" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/home/portia/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub" FILES "/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/cpp_pubsub" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+
+# install(FILES "/opt/ros/dashing/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/cpp_pubsub/environment")
+ament_cmake_symlink_install_files("/home/portia/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub" FILES "/opt/ros/dashing/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/cpp_pubsub/environment")
+
+# install(FILES "/opt/ros/dashing/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/cpp_pubsub/environment")
+ament_cmake_symlink_install_files("/home/portia/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub" FILES "/opt/ros/dashing/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/cpp_pubsub/environment")
+
+# install(FILES "/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/cpp_pubsub")
+ament_cmake_symlink_install_files("/home/portia/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub" FILES "/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/cpp_pubsub")
+
+# install(FILES "/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/cpp_pubsub")
+ament_cmake_symlink_install_files("/home/portia/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub" FILES "/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/cpp_pubsub")
+
+# install(FILES "/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/cpp_pubsub")
+ament_cmake_symlink_install_files("/home/portia/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub" FILES "/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/cpp_pubsub")
+
+# install(FILES "/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/ament_cmake_index/share/ament_index/resource_index/packages/cpp_pubsub" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/home/portia/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub" FILES "/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/ament_cmake_index/share/ament_index/resource_index/packages/cpp_pubsub" "DESTINATION" "share/ament_index/resource_index/packages")
+
+# install(FILES "/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/ament_cmake_core/cpp_pubsubConfig.cmake" "/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/ament_cmake_core/cpp_pubsubConfig-version.cmake" "DESTINATION" "share/cpp_pubsub/cmake")
+ament_cmake_symlink_install_files("/home/portia/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub" FILES "/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/ament_cmake_core/cpp_pubsubConfig.cmake" "/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/ament_cmake_core/cpp_pubsubConfig-version.cmake" "DESTINATION" "share/cpp_pubsub/cmake")
+
+# install(FILES "/home/portia/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub/package.xml" "DESTINATION" "share/cpp_pubsub")
+ament_cmake_symlink_install_files("/home/portia/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub" FILES "/home/portia/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub/package.xml" "DESTINATION" "share/cpp_pubsub")
+
+# install("TARGETS" "talker" "listener" "DESTINATION" "lib/cpp_pubsub")
+include("/home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
+>>>>>>> 2bfd020d511dce9e8de31ce95719fda3d0662758
