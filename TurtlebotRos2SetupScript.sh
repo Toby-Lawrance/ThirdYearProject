@@ -1,3 +1,6 @@
+yes | sudo apt-get install git cmake g++
+echo "git, cmake and g++ install"
+
 sudo fallocate -l 1G /swapfile
 sudo chmod 600 /swapfile
 sudo mkswap /swapfile
