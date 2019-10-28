@@ -2,6 +2,7 @@ sudo apt-get update
 yes | sudo apt-get install cmake g++
 echo "git, cmake and g++ install"
 
+sudo swapoff -a
 sudo fallocate -l 1G /swapfile
 sudo chmod 600 /swapfile
 sudo mkswap /swapfile
