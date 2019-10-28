@@ -1,3 +1,4 @@
+sudo apt-get update
 yes | sudo apt-get install cmake g++
 echo "git, cmake and g++ install"
 
