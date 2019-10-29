@@ -1,0 +1,311 @@
+[0.000000] (-) TimerEvent: {}
+[0.001928] (cpp_pubsub) JobQueued: {'identifier': 'cpp_pubsub', 'dependencies': OrderedDict()}
+[0.003811] (cpp_pubsub) JobStarted: {'identifier': 'cpp_pubsub'}
+[0.098377] (-) TimerEvent: {}
+[0.158300] (cpp_pubsub) JobProgress: {'identifier': 'cpp_pubsub', 'progress': 'cmake'}
+[0.167817] (cpp_pubsub) JobProgress: {'identifier': 'cpp_pubsub', 'progress': 'build'}
+[0.173695] (cpp_pubsub) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/portia/ThirdYearProject/ros2OnBot_ws/build/cpp_pubsub', '--', '-j4', '-l4'], 'cwd': '/home/portia/ThirdYearProject/ros2OnBot_ws/build/cpp_pubsub', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/portia'), ('USER', 'portia'), ('XDG_SEAT', 'seat0'), ('LD_LIBRARY_PATH', '/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/turtlebot3_msgs/lib:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/dynamixel_sdk/lib:/home/portia/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/portia/turtlebot3_ws/install/dynamixel_sdk/lib:/opt/ros/dashing/lib'), ('SHLVL', '1'), ('OLDPWD', '/home/portia/ThirdYearProject'), ('HOME', '/home/portia'), ('HUSHLOGIN', 'FALSE'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/home/portia/ThirdYearProject/ros2OnBot_ws/install:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install:/home/portia/turtlebot3_ws/install'), ('ROS_DISTRO', 'dashing'), ('LOGNAME', 'portia'), ('JOURNAL_STREAM', '9:31891'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_ID', '1'), ('TERM', 'linux'), ('PATH', '/opt/ros/dashing/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('INVOCATION_ID', '0b5d4c630fad4991ae14a570797aea2e'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/portia/ThirdYearProject/ros2OnBot_ws/install/cpp_pubsub:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/turtlebot3_teleop:/home/portia/turtlebot3_ws/install/turtlebot3:/home/portia/turtlebot3_ws/install/turtlebot3_teleop:/home/portia/turtlebot3_ws/install/turtlebot3_bringup:/home/portia/turtlebot3_ws/install/turtlebot3_node:/home/portia/turtlebot3_ws/install/turtlebot3_msgs:/home/portia/turtlebot3_ws/install/turtlebot3_description:/home/portia/turtlebot3_ws/install/hls_lfcd_lds_driver:/home/portia/turtlebot3_ws/install/dynamixel_sdk:/opt/ros/dashing'), ('ROS_DOMAIN_ID', '42'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('XDG_VTNR', '1'), ('TURTLEBOT3_MODEL', 'burger'), ('PWD', '/home/portia/ThirdYearProject/ros2OnBot_ws/build/cpp_pubsub'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_teleop:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/turtlebot3_teleop/lib/python3.6/site-packages:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/turtlebot3_msgs/lib/python3.6/site-packages:/home/portia/turtlebot3_ws/build/turtlebot3_teleop:/home/portia/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.6/site-packages:/home/portia/turtlebot3_ws/install/turtlebot3_msgs/lib/python3.6/site-packages:/opt/ros/dashing/lib/python3.6/site-packages'), ('CMAKE_PREFIX_PATH', '/home/portia/ThirdYearProject/ros2OnBot_ws/install/cpp_pubsub:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/turtlebot3:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/turtlebot3_simulations:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/turtlebot3_bringup:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/turtlebot3_node:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/turtlebot3_navigation2:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/turtlebot3_fake_node:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/turtlebot3_msgs:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/turtlebot3_gazebo:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/turtlebot3_description:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/turtlebot3_cartographer:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/hls_lfcd_lds_driver:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/dynamixel_sdk:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/cpp_pubsub:/home/portia/turtlebot3_ws/install/turtlebot3:/home/portia/turtlebot3_ws/install/turtlebot3_bringup:/home/portia/turtlebot3_ws/install/turtlebot3_node:/home/portia/turtlebot3_ws/install/turtlebot3_msgs:/home/portia/turtlebot3_ws/install/turtlebot3_description:/home/portia/turtlebot3_ws/install/hls_lfcd_lds_driver:/home/portia/turtlebot3_ws/install/dynamixel_sdk:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/turtlebot3_teleop:/home/portia/turtlebot3_ws/install/turtlebot3_teleop:/opt/ros/dashing')]), 'shell': False}
+[0.198920] (-) TimerEvent: {}
+[0.300880] (-) TimerEvent: {}
+[0.373489] (cpp_pubsub) StdoutLine: {'line': b'-- Found ament_cmake: 0.7.3 (/opt/ros/dashing/share/ament_cmake/cmake)\n'}
+[0.401183] (-) TimerEvent: {}
+[0.502636] (-) TimerEvent: {}
+[0.604127] (-) TimerEvent: {}
+[0.637410] (cpp_pubsub) StdoutLine: {'line': b'-- Using PYTHON_EXECUTABLE: /usr/bin/python3\n'}
+[0.704307] (-) TimerEvent: {}
+[0.805726] (-) TimerEvent: {}
+[0.906970] (-) TimerEvent: {}
+[1.008180] (-) TimerEvent: {}
+[1.109451] (-) TimerEvent: {}
+[1.210752] (-) TimerEvent: {}
+[1.312157] (-) TimerEvent: {}
+[1.413456] (-) TimerEvent: {}
+[1.514729] (-) TimerEvent: {}
+[1.615952] (-) TimerEvent: {}
+[1.717232] (-) TimerEvent: {}
+[1.818465] (-) TimerEvent: {}
+[1.919741] (-) TimerEvent: {}
+[2.021297] (-) TimerEvent: {}
+[2.119614] (cpp_pubsub) StdoutLine: {'line': b'-- Override CMake install command with custom implementation using symlinks instead of copying resources\n'}
+[2.121433] (-) TimerEvent: {}
+[2.169834] (cpp_pubsub) StdoutLine: {'line': b'-- Found rclcpp: 0.7.11 (/opt/ros/dashing/share/rclcpp/cmake)\n'}
+[2.221773] (-) TimerEvent: {}
+[2.309624] (cpp_pubsub) StdoutLine: {'line': b'-- Found rosidl_adapter: 0.7.7 (/opt/ros/dashing/share/rosidl_adapter/cmake)\n'}
+[2.322140] (-) TimerEvent: {}
+[2.424353] (-) TimerEvent: {}
+[2.525823] (-) TimerEvent: {}
+[2.596302] (cpp_pubsub) StdoutLine: {'line': b'-- Found rmw_implementation_cmake: 0.7.2 (/opt/ros/dashing/share/rmw_implementation_cmake/cmake)\n'}
+[2.626240] (-) TimerEvent: {}
+[2.728351] (-) TimerEvent: {}
+[2.829792] (-) TimerEvent: {}
+[2.839189] (cpp_pubsub) StdoutLine: {'line': b'-- Found std_msgs: 0.7.0 (/opt/ros/dashing/share/std_msgs/cmake)\n'}
+[2.875056] (cpp_pubsub) StdoutLine: {'line': b'-- Found ament_lint_auto: 0.7.11 (/opt/ros/dashing/share/ament_lint_auto/cmake)\n'}
+[2.929992] (-) TimerEvent: {}
+[3.031343] (-) TimerEvent: {}
+[3.132882] (-) TimerEvent: {}
+[3.234304] (-) TimerEvent: {}
+[3.335743] (-) TimerEvent: {}
+[3.437336] (-) TimerEvent: {}
+[3.518143] (cpp_pubsub) StdoutLine: {'line': b"-- Added test 'copyright' to check for copyright in CMake / C / C++ / Python code\n"}
+[3.529214] (cpp_pubsub) StdoutLine: {'line': b"-- Added test 'cppcheck' to perform static code analysis on C / C++ code\n"}
+[3.530574] (cpp_pubsub) StdoutLine: {'line': b'-- Configured cppcheck include dirs: \n'}
+[3.537765] (cpp_pubsub) StdoutLine: {'line': b"-- Added test 'cpplint' to check C / C++ code against the Google style\n"}
+[3.538878] (-) TimerEvent: {}
+[3.543909] (cpp_pubsub) StdoutLine: {'line': b"-- Added test 'lint_cmake' to check CMake code style\n"}
+[3.550069] (cpp_pubsub) StdoutLine: {'line': b"-- Added test 'uncrustify' to check C / C++ code style\n"}
+[3.553711] (cpp_pubsub) StdoutLine: {'line': b"-- Added test 'xmllint' to check XML markup files\n"}
+[3.639206] (-) TimerEvent: {}
+[3.710783] (cpp_pubsub) StdoutLine: {'line': b'-- Configuring done\n'}
+[3.739463] (-) TimerEvent: {}
+[3.825327] (cpp_pubsub) StdoutLine: {'line': b'-- Generating done\n'}
+[3.835935] (cpp_pubsub) StdoutLine: {'line': b'-- Build files have been written to: /home/portia/ThirdYearProject/ros2OnBot_ws/build/cpp_pubsub\n'}
+[3.839800] (-) TimerEvent: {}
+[3.941490] (-) TimerEvent: {}
+[3.987298] (cpp_pubsub) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target listener\x1b[0m\n'}
+[3.988682] (cpp_pubsub) StdoutLine: {'line': b'\x1b[35m\x1b[1mScanning dependencies of target talker\x1b[0m\n'}
+[4.041933] (-) TimerEvent: {}
+[4.121499] (cpp_pubsub) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/listener.dir/src/subscriber_member_function.cpp.o\x1b[0m\n'}
+[4.122992] (cpp_pubsub) StdoutLine: {'line': b'[ 50%] \x1b[32mBuilding CXX object CMakeFiles/talker.dir/src/publisher_member_function.cpp.o\x1b[0m\n'}
+[4.142442] (-) TimerEvent: {}
+[4.244146] (-) TimerEvent: {}
+[4.345709] (-) TimerEvent: {}
+[4.447228] (-) TimerEvent: {}
+[4.548839] (-) TimerEvent: {}
+[4.650616] (-) TimerEvent: {}
+[4.751947] (-) TimerEvent: {}
+[4.853944] (-) TimerEvent: {}
+[4.956028] (-) TimerEvent: {}
+[5.057920] (-) TimerEvent: {}
+[5.159841] (-) TimerEvent: {}
+[5.261701] (-) TimerEvent: {}
+[5.363647] (-) TimerEvent: {}
+[5.465541] (-) TimerEvent: {}
+[5.567489] (-) TimerEvent: {}
+[5.669249] (-) TimerEvent: {}
+[5.771177] (-) TimerEvent: {}
+[5.873129] (-) TimerEvent: {}
+[5.975032] (-) TimerEvent: {}
+[6.076823] (-) TimerEvent: {}
+[6.178723] (-) TimerEvent: {}
+[6.280648] (-) TimerEvent: {}
+[6.382615] (-) TimerEvent: {}
+[6.484668] (-) TimerEvent: {}
+[6.586645] (-) TimerEvent: {}
+[6.688557] (-) TimerEvent: {}
+[6.790539] (-) TimerEvent: {}
+[6.892439] (-) TimerEvent: {}
+[6.994392] (-) TimerEvent: {}
+[7.096420] (-) TimerEvent: {}
+[7.198487] (-) TimerEvent: {}
+[7.300445] (-) TimerEvent: {}
+[7.402348] (-) TimerEvent: {}
+[7.504142] (-) TimerEvent: {}
+[7.606011] (-) TimerEvent: {}
+[7.707855] (-) TimerEvent: {}
+[7.809590] (-) TimerEvent: {}
+[7.911304] (-) TimerEvent: {}
+[8.013123] (-) TimerEvent: {}
+[8.115043] (-) TimerEvent: {}
+[8.216901] (-) TimerEvent: {}
+[8.318884] (-) TimerEvent: {}
+[8.420736] (-) TimerEvent: {}
+[8.522809] (-) TimerEvent: {}
+[8.624682] (-) TimerEvent: {}
+[8.726426] (-) TimerEvent: {}
+[8.828194] (-) TimerEvent: {}
+[8.930211] (-) TimerEvent: {}
+[9.031945] (-) TimerEvent: {}
+[9.134047] (-) TimerEvent: {}
+[9.235887] (-) TimerEvent: {}
+[9.337850] (-) TimerEvent: {}
+[9.439591] (-) TimerEvent: {}
+[9.541530] (-) TimerEvent: {}
+[9.643459] (-) TimerEvent: {}
+[9.746255] (-) TimerEvent: {}
+[9.848392] (-) TimerEvent: {}
+[9.950402] (-) TimerEvent: {}
+[10.052343] (-) TimerEvent: {}
+[10.154497] (-) TimerEvent: {}
+[10.256398] (-) TimerEvent: {}
+[10.358305] (-) TimerEvent: {}
+[10.460227] (-) TimerEvent: {}
+[10.562117] (-) TimerEvent: {}
+[10.664060] (-) TimerEvent: {}
+[10.766041] (-) TimerEvent: {}
+[10.867953] (-) TimerEvent: {}
+[10.970226] (-) TimerEvent: {}
+[11.072162] (-) TimerEvent: {}
+[11.174049] (-) TimerEvent: {}
+[11.276237] (-) TimerEvent: {}
+[11.378129] (-) TimerEvent: {}
+[11.480029] (-) TimerEvent: {}
+[11.581957] (-) TimerEvent: {}
+[11.684075] (-) TimerEvent: {}
+[11.786017] (-) TimerEvent: {}
+[11.887819] (-) TimerEvent: {}
+[11.989542] (-) TimerEvent: {}
+[12.091239] (-) TimerEvent: {}
+[12.193153] (-) TimerEvent: {}
+[12.294996] (-) TimerEvent: {}
+[12.396895] (-) TimerEvent: {}
+[12.498862] (-) TimerEvent: {}
+[12.600748] (-) TimerEvent: {}
+[12.702661] (-) TimerEvent: {}
+[12.804569] (-) TimerEvent: {}
+[12.906414] (-) TimerEvent: {}
+[13.008159] (-) TimerEvent: {}
+[13.110177] (-) TimerEvent: {}
+[13.212167] (-) TimerEvent: {}
+[13.314142] (-) TimerEvent: {}
+[13.416053] (-) TimerEvent: {}
+[13.518107] (-) TimerEvent: {}
+[13.620074] (-) TimerEvent: {}
+[13.722146] (-) TimerEvent: {}
+[13.824102] (-) TimerEvent: {}
+[13.926025] (-) TimerEvent: {}
+[14.028053] (-) TimerEvent: {}
+[14.130109] (-) TimerEvent: {}
+[14.232088] (-) TimerEvent: {}
+[14.333853] (-) TimerEvent: {}
+[14.435414] (-) TimerEvent: {}
+[14.536918] (-) TimerEvent: {}
+[14.638533] (-) TimerEvent: {}
+[14.739930] (-) TimerEvent: {}
+[14.841483] (-) TimerEvent: {}
+[14.943035] (-) TimerEvent: {}
+[15.044524] (-) TimerEvent: {}
+[15.146185] (-) TimerEvent: {}
+[15.247821] (-) TimerEvent: {}
+[15.349470] (-) TimerEvent: {}
+[15.451245] (-) TimerEvent: {}
+[15.553021] (-) TimerEvent: {}
+[15.654875] (-) TimerEvent: {}
+[15.756624] (-) TimerEvent: {}
+[15.858508] (-) TimerEvent: {}
+[15.960386] (-) TimerEvent: {}
+[16.062331] (-) TimerEvent: {}
+[16.164276] (-) TimerEvent: {}
+[16.266208] (-) TimerEvent: {}
+[16.368048] (-) TimerEvent: {}
+[16.470045] (-) TimerEvent: {}
+[16.572004] (-) TimerEvent: {}
+[16.673888] (-) TimerEvent: {}
+[16.775912] (-) TimerEvent: {}
+[16.878167] (-) TimerEvent: {}
+[16.979957] (-) TimerEvent: {}
+[17.081840] (-) TimerEvent: {}
+[17.183998] (-) TimerEvent: {}
+[17.286202] (-) TimerEvent: {}
+[17.387974] (-) TimerEvent: {}
+[17.489552] (-) TimerEvent: {}
+[17.591258] (-) TimerEvent: {}
+[17.693163] (-) TimerEvent: {}
+[17.795134] (-) TimerEvent: {}
+[17.897171] (-) TimerEvent: {}
+[17.999067] (-) TimerEvent: {}
+[18.101182] (-) TimerEvent: {}
+[18.203063] (-) TimerEvent: {}
+[18.305176] (-) TimerEvent: {}
+[18.407201] (-) TimerEvent: {}
+[18.509255] (-) TimerEvent: {}
+[18.611090] (-) TimerEvent: {}
+[18.713192] (-) TimerEvent: {}
+[18.815030] (-) TimerEvent: {}
+[18.917122] (-) TimerEvent: {}
+[19.019058] (-) TimerEvent: {}
+[19.120869] (-) TimerEvent: {}
+[19.222943] (-) TimerEvent: {}
+[19.325097] (-) TimerEvent: {}
+[19.427031] (-) TimerEvent: {}
+[19.528982] (-) TimerEvent: {}
+[19.631078] (-) TimerEvent: {}
+[19.732966] (-) TimerEvent: {}
+[19.835031] (-) TimerEvent: {}
+[19.937189] (-) TimerEvent: {}
+[20.039100] (-) TimerEvent: {}
+[20.141239] (-) TimerEvent: {}
+[20.243125] (-) TimerEvent: {}
+[20.345131] (-) TimerEvent: {}
+[20.446976] (-) TimerEvent: {}
+[20.548930] (-) TimerEvent: {}
+[20.651062] (-) TimerEvent: {}
+[20.753251] (-) TimerEvent: {}
+[20.855066] (-) TimerEvent: {}
+[20.957075] (-) TimerEvent: {}
+[21.058934] (-) TimerEvent: {}
+[21.160689] (-) TimerEvent: {}
+[21.262369] (-) TimerEvent: {}
+[21.364090] (-) TimerEvent: {}
+[21.466374] (-) TimerEvent: {}
+[21.568226] (-) TimerEvent: {}
+[21.669972] (-) TimerEvent: {}
+[21.771702] (-) TimerEvent: {}
+[21.873396] (-) TimerEvent: {}
+[21.975239] (-) TimerEvent: {}
+[22.077363] (-) TimerEvent: {}
+[22.179086] (-) TimerEvent: {}
+[22.280979] (-) TimerEvent: {}
+[22.382797] (-) TimerEvent: {}
+[22.484254] (-) TimerEvent: {}
+[22.585868] (-) TimerEvent: {}
+[22.659989] (cpp_pubsub) StdoutLine: {'line': b'[ 75%] \x1b[32m\x1b[1mLinking CXX executable talker\x1b[0m\n'}
+[22.686172] (-) TimerEvent: {}
+[22.787655] (-) TimerEvent: {}
+[22.889222] (-) TimerEvent: {}
+[22.991036] (-) TimerEvent: {}
+[23.093536] (-) TimerEvent: {}
+[23.195284] (-) TimerEvent: {}
+[23.298114] (-) TimerEvent: {}
+[23.361927] (cpp_pubsub) StdoutLine: {'line': b'[100%] \x1b[32m\x1b[1mLinking CXX executable listener\x1b[0m\n'}
+[23.398385] (-) TimerEvent: {}
+[23.500245] (-) TimerEvent: {}
+[23.602416] (-) TimerEvent: {}
+[23.705316] (-) TimerEvent: {}
+[23.808743] (-) TimerEvent: {}
+[23.911314] (-) TimerEvent: {}
+[24.013402] (-) TimerEvent: {}
+[24.115579] (-) TimerEvent: {}
+[24.217598] (-) TimerEvent: {}
+[24.319518] (-) TimerEvent: {}
+[24.421077] (-) TimerEvent: {}
+[24.522632] (-) TimerEvent: {}
+[24.568383] (cpp_pubsub) StdoutLine: {'line': b'[100%] Built target talker\n'}
+[24.622924] (-) TimerEvent: {}
+[24.724284] (-) TimerEvent: {}
+[24.825675] (-) TimerEvent: {}
+[24.852899] (cpp_pubsub) StdoutLine: {'line': b'[100%] Built target listener\n'}
+[24.926324] (-) TimerEvent: {}
+[24.932840] (cpp_pubsub) CommandEnded: {'returncode': 0}
+[25.026744] (-) TimerEvent: {}
+[25.115460] (cpp_pubsub) JobProgress: {'identifier': 'cpp_pubsub', 'progress': 'install'}
+[25.117906] (cpp_pubsub) Command: {'cmd': ['/usr/bin/cmake', '--build', '/home/portia/ThirdYearProject/ros2OnBot_ws/build/cpp_pubsub', '--target', 'install', '--', '-j4', '-l4'], 'cwd': '/home/portia/ThirdYearProject/ros2OnBot_ws/build/cpp_pubsub', 'env': OrderedDict([('LESSOPEN', '| /usr/bin/lesspipe %s'), ('MAIL', '/var/mail/portia'), ('USER', 'portia'), ('XDG_SEAT', 'seat0'), ('LD_LIBRARY_PATH', '/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/turtlebot3_msgs/lib:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/dynamixel_sdk/lib:/home/portia/turtlebot3_ws/install/turtlebot3_msgs/lib:/home/portia/turtlebot3_ws/install/dynamixel_sdk/lib:/opt/ros/dashing/lib'), ('SHLVL', '1'), ('OLDPWD', '/home/portia/ThirdYearProject'), ('HOME', '/home/portia'), ('HUSHLOGIN', 'FALSE'), ('ROS_PYTHON_VERSION', '3'), ('COLCON_PREFIX_PATH', '/home/portia/ThirdYearProject/ros2OnBot_ws/install:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install:/home/portia/turtlebot3_ws/install'), ('ROS_DISTRO', 'dashing'), ('LOGNAME', 'portia'), ('JOURNAL_STREAM', '9:31891'), ('_', '/usr/bin/colcon'), ('ROS_VERSION', '2'), ('XDG_SESSION_ID', '1'), ('TERM', 'linux'), ('PATH', '/opt/ros/dashing/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin'), ('INVOCATION_ID', '0b5d4c630fad4991ae14a570797aea2e'), ('XDG_RUNTIME_DIR', '/run/user/1000'), ('LANG', 'C.UTF-8'), ('LS_COLORS', 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:'), ('AMENT_PREFIX_PATH', '/home/portia/ThirdYearProject/ros2OnBot_ws/install/cpp_pubsub:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/turtlebot3_teleop:/home/portia/turtlebot3_ws/install/turtlebot3:/home/portia/turtlebot3_ws/install/turtlebot3_teleop:/home/portia/turtlebot3_ws/install/turtlebot3_bringup:/home/portia/turtlebot3_ws/install/turtlebot3_node:/home/portia/turtlebot3_ws/install/turtlebot3_msgs:/home/portia/turtlebot3_ws/install/turtlebot3_description:/home/portia/turtlebot3_ws/install/hls_lfcd_lds_driver:/home/portia/turtlebot3_ws/install/dynamixel_sdk:/opt/ros/dashing'), ('ROS_DOMAIN_ID', '42'), ('SHELL', '/bin/bash'), ('LESSCLOSE', '/usr/bin/lesspipe %s %s'), ('XDG_VTNR', '1'), ('TURTLEBOT3_MODEL', 'burger'), ('PWD', '/home/portia/ThirdYearProject/ros2OnBot_ws/build/cpp_pubsub'), ('XDG_DATA_DIRS', '/usr/local/share:/usr/share:/var/lib/snapd/desktop'), ('PYTHONPATH', '/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_teleop:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/turtlebot3_teleop/lib/python3.6/site-packages:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/turtlebot3_msgs/lib/python3.6/site-packages:/home/portia/turtlebot3_ws/build/turtlebot3_teleop:/home/portia/turtlebot3_ws/install/turtlebot3_teleop/lib/python3.6/site-packages:/home/portia/turtlebot3_ws/install/turtlebot3_msgs/lib/python3.6/site-packages:/opt/ros/dashing/lib/python3.6/site-packages'), ('CMAKE_PREFIX_PATH', '/home/portia/ThirdYearProject/ros2OnBot_ws/install/cpp_pubsub:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/turtlebot3:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/turtlebot3_simulations:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/turtlebot3_bringup:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/turtlebot3_node:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/turtlebot3_navigation2:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/turtlebot3_fake_node:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/turtlebot3_msgs:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/turtlebot3_gazebo:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/turtlebot3_description:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/turtlebot3_cartographer:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/hls_lfcd_lds_driver:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/dynamixel_sdk:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/cpp_pubsub:/home/portia/turtlebot3_ws/install/turtlebot3:/home/portia/turtlebot3_ws/install/turtlebot3_bringup:/home/portia/turtlebot3_ws/install/turtlebot3_node:/home/portia/turtlebot3_ws/install/turtlebot3_msgs:/home/portia/turtlebot3_ws/install/turtlebot3_description:/home/portia/turtlebot3_ws/install/hls_lfcd_lds_driver:/home/portia/turtlebot3_ws/install/dynamixel_sdk:/home/portia/ThirdYearProject/ros2TurtleBot3_ws/install/turtlebot3_teleop:/home/portia/turtlebot3_ws/install/turtlebot3_teleop:/opt/ros/dashing')]), 'shell': False}
+[25.130749] (-) TimerEvent: {}
+[25.232517] (-) TimerEvent: {}
+[25.334188] (-) TimerEvent: {}
+[25.435556] (-) TimerEvent: {}
+[25.536913] (-) TimerEvent: {}
+[25.570041] (cpp_pubsub) StdoutLine: {'line': b'[100%] Built target listener\n'}
+[25.571590] (cpp_pubsub) StdoutLine: {'line': b'[100%] Built target talker\n'}
+[25.637297] (-) TimerEvent: {}
+[25.684666] (cpp_pubsub) StdoutLine: {'line': b'\x1b[36mInstall the project...\x1b[0m\n'}
+[25.737632] (-) TimerEvent: {}
+[25.742574] (cpp_pubsub) StdoutLine: {'line': b'-- Install configuration: ""\n'}
+[25.745853] (cpp_pubsub) StdoutLine: {'line': b'-- Execute custom install script\n'}
+[25.749749] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date symlink: /home/portia/ThirdYearProject/ros2OnBot_ws/install/cpp_pubsub/share/ament_index/resource_index/package_run_dependencies/cpp_pubsub\n'}
+[25.753363] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date symlink: /home/portia/ThirdYearProject/ros2OnBot_ws/install/cpp_pubsub/share/ament_index/resource_index/parent_prefix_path/cpp_pubsub\n'}
+[25.756335] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date symlink: /home/portia/ThirdYearProject/ros2OnBot_ws/install/cpp_pubsub/share/cpp_pubsub/environment/ament_prefix_path.sh\n'}
+[25.759291] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date symlink: /home/portia/ThirdYearProject/ros2OnBot_ws/install/cpp_pubsub/share/cpp_pubsub/environment/path.sh\n'}
+[25.762124] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date symlink: /home/portia/ThirdYearProject/ros2OnBot_ws/install/cpp_pubsub/share/cpp_pubsub/local_setup.bash\n'}
+[25.764866] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date symlink: /home/portia/ThirdYearProject/ros2OnBot_ws/install/cpp_pubsub/share/cpp_pubsub/local_setup.sh\n'}
+[25.767815] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date symlink: /home/portia/ThirdYearProject/ros2OnBot_ws/install/cpp_pubsub/share/cpp_pubsub/local_setup.zsh\n'}
+[25.771298] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date symlink: /home/portia/ThirdYearProject/ros2OnBot_ws/install/cpp_pubsub/share/ament_index/resource_index/packages/cpp_pubsub\n'}
+[25.774779] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date symlink: /home/portia/ThirdYearProject/ros2OnBot_ws/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsubConfig.cmake\n'}
+[25.777005] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date symlink: /home/portia/ThirdYearProject/ros2OnBot_ws/install/cpp_pubsub/share/cpp_pubsub/cmake/cpp_pubsubConfig-version.cmake\n'}
+[25.779885] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date symlink: /home/portia/ThirdYearProject/ros2OnBot_ws/install/cpp_pubsub/share/cpp_pubsub/package.xml\n'}
+[25.785504] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date symlink: /home/portia/ThirdYearProject/ros2OnBot_ws/install/cpp_pubsub/lib/cpp_pubsub/talker\n'}
+[25.787958] (cpp_pubsub) StdoutLine: {'line': b'-- Up-to-date symlink: /home/portia/ThirdYearProject/ros2OnBot_ws/install/cpp_pubsub/lib/cpp_pubsub/listener\n'}
+[25.804490] (cpp_pubsub) CommandEnded: {'returncode': 0}
+[25.837983] (-) TimerEvent: {}
+[25.944425] (-) TimerEvent: {}
+[25.965997] (cpp_pubsub) JobEnded: {'identifier': 'cpp_pubsub', 'rc': 0}
+[25.979449] (-) EventReactorShutdown: {}
