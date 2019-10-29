@@ -6,7 +6,6 @@
 
 #IncludeRegexTransform: 
 
-<<<<<<< HEAD
 /home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub/src/subscriber_member_function.cpp
 memory
 -
@@ -14,15 +13,6 @@ rclcpp/rclcpp.hpp
 /home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub/src/rclcpp/rclcpp.hpp
 std_msgs/msg/string.hpp
 /home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub/src/std_msgs/msg/string.hpp
-=======
-/home/portia/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub/src/subscriber_member_function.cpp
-memory
--
-rclcpp/rclcpp.hpp
-/home/portia/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub/src/rclcpp/rclcpp.hpp
-std_msgs/msg/string.hpp
-/home/portia/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub/src/std_msgs/msg/string.hpp
->>>>>>> 2bfd020d511dce9e8de31ce95719fda3d0662758
 
 /opt/ros/dashing/include/builtin_interfaces/msg/duration.hpp
 builtin_interfaces/msg/duration__struct.hpp

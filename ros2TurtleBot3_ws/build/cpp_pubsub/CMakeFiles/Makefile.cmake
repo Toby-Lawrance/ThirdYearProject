@@ -10,19 +10,12 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.10.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.10.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.10.2/CMakeSystem.cmake"
-<<<<<<< HEAD
-  "ament_cmake_core/package.cmake"
-  "ament_cmake_package_templates/templates.cmake"
-  "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub/CMakeLists.txt"
-  "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub/package.xml"
-=======
   "CMakeFiles/feature_tests.c"
   "CMakeFiles/feature_tests.cxx"
   "ament_cmake_core/package.cmake"
   "ament_cmake_package_templates/templates.cmake"
-  "/home/portia/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub/CMakeLists.txt"
-  "/home/portia/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub/package.xml"
->>>>>>> 2bfd020d511dce9e8de31ce95719fda3d0662758
+  "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub/CMakeLists.txt"
+  "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub/package.xml"
   "/opt/ros/dashing/lib/python3.6/site-packages/ament_package/template/package_level/local_setup.bash.in"
   "/opt/ros/dashing/lib/python3.6/site-packages/ament_package/template/package_level/local_setup.sh.in"
   "/opt/ros/dashing/lib/python3.6/site-packages/ament_package/template/package_level/local_setup.zsh.in"
@@ -72,14 +65,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/ros/dashing/share/ament_cmake_core/cmake/index/ament_index_register_package.cmake"
   "/opt/ros/dashing/share/ament_cmake_core/cmake/index/ament_index_register_resource.cmake"
   "/opt/ros/dashing/share/ament_cmake_core/cmake/package_templates/templates_2_cmake.py"
-  "/opt/ros/dashing/share/ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install.cmake.in"
-  "/opt/ros/dashing/share/ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install_append_install_code.cmake"
-  "/opt/ros/dashing/share/ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install_directory.cmake"
-  "/opt/ros/dashing/share/ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install_files.cmake"
-  "/opt/ros/dashing/share/ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install_programs.cmake"
-  "/opt/ros/dashing/share/ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install_targets.cmake"
-  "/opt/ros/dashing/share/ament_cmake_core/cmake/symlink_install/ament_cmake_symlink_install_uninstall_script.cmake.in"
-  "/opt/ros/dashing/share/ament_cmake_core/cmake/symlink_install/install.cmake"
   "/opt/ros/dashing/share/ament_cmake_core/cmake/uninstall_target/ament_cmake_uninstall_target.cmake.in"
   "/opt/ros/dashing/share/ament_cmake_core/cmake/uninstall_target/ament_cmake_uninstall_target_append_uninstall_code.cmake"
   "/opt/ros/dashing/share/ament_cmake_cppcheck/cmake/ament_cmake_cppcheck-extras.cmake"
@@ -306,16 +291,6 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/opt/ros/dashing/share/std_msgs/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake"
   "/opt/ros/dashing/share/std_msgs/cmake/std_msgsConfig-version.cmake"
   "/opt/ros/dashing/share/std_msgs/cmake/std_msgsConfig.cmake"
-<<<<<<< HEAD
-  "/usr/share/cmake-3.10/Modules/CMakeCInformation.cmake"
-  "/usr/share/cmake-3.10/Modules/CMakeCXXInformation.cmake"
-  "/usr/share/cmake-3.10/Modules/CMakeCommonLanguageInclude.cmake"
-  "/usr/share/cmake-3.10/Modules/CMakeConfigurableFile.in"
-  "/usr/share/cmake-3.10/Modules/CMakeGenericSystem.cmake"
-  "/usr/share/cmake-3.10/Modules/CMakeLanguageInformation.cmake"
-  "/usr/share/cmake-3.10/Modules/CMakeSystemSpecificInformation.cmake"
-  "/usr/share/cmake-3.10/Modules/CMakeSystemSpecificInitialize.cmake"
-=======
   "/usr/share/cmake-3.10/Modules/CMakeCCompiler.cmake.in"
   "/usr/share/cmake-3.10/Modules/CMakeCCompilerABI.c"
   "/usr/share/cmake-3.10/Modules/CMakeCInformation.cmake"
@@ -343,18 +318,11 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.10/Modules/CMakeTestCXXCompiler.cmake"
   "/usr/share/cmake-3.10/Modules/CMakeTestCompilerCommon.cmake"
   "/usr/share/cmake-3.10/Modules/CMakeUnixFindMake.cmake"
->>>>>>> 2bfd020d511dce9e8de31ce95719fda3d0662758
   "/usr/share/cmake-3.10/Modules/CheckFunctionExists.c"
   "/usr/share/cmake-3.10/Modules/CheckIncludeFile.c.in"
   "/usr/share/cmake-3.10/Modules/CheckIncludeFile.cmake"
   "/usr/share/cmake-3.10/Modules/CheckLibraryExists.cmake"
   "/usr/share/cmake-3.10/Modules/CheckSymbolExists.cmake"
-<<<<<<< HEAD
-  "/usr/share/cmake-3.10/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
-  "/usr/share/cmake-3.10/Modules/Compiler/GNU-C.cmake"
-  "/usr/share/cmake-3.10/Modules/Compiler/GNU-CXX.cmake"
-  "/usr/share/cmake-3.10/Modules/Compiler/GNU.cmake"
-=======
   "/usr/share/cmake-3.10/Modules/Compiler/ADSP-DetermineCompiler.cmake"
   "/usr/share/cmake-3.10/Modules/Compiler/ARMCC-DetermineCompiler.cmake"
   "/usr/share/cmake-3.10/Modules/Compiler/AppleClang-DetermineCompiler.cmake"
@@ -403,17 +371,13 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.10/Modules/Compiler/XL-CXX-DetermineCompiler.cmake"
   "/usr/share/cmake-3.10/Modules/Compiler/zOS-C-DetermineCompiler.cmake"
   "/usr/share/cmake-3.10/Modules/Compiler/zOS-CXX-DetermineCompiler.cmake"
->>>>>>> 2bfd020d511dce9e8de31ce95719fda3d0662758
   "/usr/share/cmake-3.10/Modules/DartConfiguration.tcl.in"
   "/usr/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/share/cmake-3.10/Modules/FindPackageMessage.cmake"
   "/usr/share/cmake-3.10/Modules/FindPythonInterp.cmake"
   "/usr/share/cmake-3.10/Modules/FindThreads.cmake"
-<<<<<<< HEAD
-=======
   "/usr/share/cmake-3.10/Modules/Internal/FeatureTesting.cmake"
   "/usr/share/cmake-3.10/Modules/Platform/Linux-Determine-CXX.cmake"
->>>>>>> 2bfd020d511dce9e8de31ce95719fda3d0662758
   "/usr/share/cmake-3.10/Modules/Platform/Linux-GNU-C.cmake"
   "/usr/share/cmake-3.10/Modules/Platform/Linux-GNU-CXX.cmake"
   "/usr/share/cmake-3.10/Modules/Platform/Linux-GNU.cmake"
@@ -429,18 +393,13 @@ set(CMAKE_MAKEFILE_OUTPUTS
 
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
-<<<<<<< HEAD
-=======
   "CMakeFiles/3.10.2/CMakeSystem.cmake"
   "CMakeFiles/3.10.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.10.2/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.10.2/CMakeCCompiler.cmake"
   "CMakeFiles/3.10.2/CMakeCXXCompiler.cmake"
->>>>>>> 2bfd020d511dce9e8de31ce95719fda3d0662758
   "ament_cmake_core/stamps/templates_2_cmake.py.stamp"
   "ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake"
-  "ament_cmake_symlink_install/ament_cmake_symlink_install.cmake"
-  "ament_cmake_symlink_install/ament_cmake_symlink_install_uninstall_script.cmake"
   "CTestConfiguration.ini"
   "ament_cmake_core/stamps/package.xml.stamp"
   "ament_cmake_core/stamps/package_xml_2_cmake.py.stamp"
@@ -456,7 +415,6 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/cpp_pubsub"
   "ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/cpp_pubsub"
   "ament_cmake_index/share/ament_index/resource_index/packages/cpp_pubsub"
-  "ament_cmake_symlink_install_targets_0_.cmake"
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 

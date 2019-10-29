@@ -43,17 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-<<<<<<< HEAD
 CMAKE_SOURCE_DIR = /home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub
-=======
-CMAKE_SOURCE_DIR = /home/portia/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub
-
-# The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub
->>>>>>> 2bfd020d511dce9e8de31ce95719fda3d0662758
 
 # Utility rule file for uninstall.
 
@@ -61,11 +54,7 @@ CMAKE_BINARY_DIR = /home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pub
 include CMakeFiles/uninstall.dir/progress.make
 
 CMakeFiles/uninstall:
-<<<<<<< HEAD
 	/usr/bin/cmake -P /home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
-=======
-	/usr/bin/cmake -P /home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/ament_cmake_uninstall_target/ament_cmake_uninstall_target.cmake
->>>>>>> 2bfd020d511dce9e8de31ce95719fda3d0662758
 
 uninstall: CMakeFiles/uninstall
 uninstall: CMakeFiles/uninstall.dir/build.make
@@ -82,10 +71,6 @@ CMakeFiles/uninstall.dir/clean:
 .PHONY : CMakeFiles/uninstall.dir/clean
 
 CMakeFiles/uninstall.dir/depend:
-<<<<<<< HEAD
 	cd /home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub /home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub /home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub /home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub /home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
-=======
-	cd /home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/portia/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub /home/portia/ThirdYearProject/ros2TurtleBot3_ws/src/cpp_pubsub /home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub /home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub /home/portia/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles/uninstall.dir/DependInfo.cmake --color=$(COLOR)
->>>>>>> 2bfd020d511dce9e8de31ce95719fda3d0662758
 .PHONY : CMakeFiles/uninstall.dir/depend
 
