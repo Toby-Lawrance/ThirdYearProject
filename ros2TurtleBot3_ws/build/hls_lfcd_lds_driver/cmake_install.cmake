@@ -1,4 +1,4 @@
-# Install script for directory: /home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/utils/hls_lfcd_lds_driver
+# Install script for directory: /home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/hls_lfcd_lds_driver
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -311,43 +311,43 @@ message(STATUS "Execute custom install script")
 # begin of custom install code
 
 # install(DIRECTORY "launch" "rviz" "DESTINATION" "share/hls_lfcd_lds_driver")
-ament_cmake_symlink_install_directory("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/utils/hls_lfcd_lds_driver" DIRECTORY "launch" "rviz" "DESTINATION" "share/hls_lfcd_lds_driver")
+ament_cmake_symlink_install_directory("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/hls_lfcd_lds_driver" DIRECTORY "launch" "rviz" "DESTINATION" "share/hls_lfcd_lds_driver")
 
 # install("TARGETS" "hlds_laser_publisher" "RUNTIME_DESTINATION" "lib/hls_lfcd_lds_driver")
 include("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/hls_lfcd_lds_driver/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/hls_lfcd_lds_driver/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/hls_lfcd_lds_driver" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
-ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/utils/hls_lfcd_lds_driver" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/hls_lfcd_lds_driver/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/hls_lfcd_lds_driver" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/hls_lfcd_lds_driver" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/hls_lfcd_lds_driver/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/hls_lfcd_lds_driver" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
 # install(FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/hls_lfcd_lds_driver/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/hls_lfcd_lds_driver" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
-ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/utils/hls_lfcd_lds_driver" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/hls_lfcd_lds_driver/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/hls_lfcd_lds_driver" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/hls_lfcd_lds_driver" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/hls_lfcd_lds_driver/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/hls_lfcd_lds_driver" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
 # install(FILES "/opt/ros/dashing/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/hls_lfcd_lds_driver/environment")
-ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/utils/hls_lfcd_lds_driver" FILES "/opt/ros/dashing/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/hls_lfcd_lds_driver/environment")
+ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/hls_lfcd_lds_driver" FILES "/opt/ros/dashing/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/hls_lfcd_lds_driver/environment")
 
 # install(FILES "/opt/ros/dashing/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/hls_lfcd_lds_driver/environment")
-ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/utils/hls_lfcd_lds_driver" FILES "/opt/ros/dashing/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/hls_lfcd_lds_driver/environment")
+ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/hls_lfcd_lds_driver" FILES "/opt/ros/dashing/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/hls_lfcd_lds_driver/environment")
 
 # install(FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/hls_lfcd_lds_driver/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/hls_lfcd_lds_driver")
-ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/utils/hls_lfcd_lds_driver" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/hls_lfcd_lds_driver/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/hls_lfcd_lds_driver")
+ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/hls_lfcd_lds_driver" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/hls_lfcd_lds_driver/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/hls_lfcd_lds_driver")
 
 # install(FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/hls_lfcd_lds_driver/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/hls_lfcd_lds_driver")
-ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/utils/hls_lfcd_lds_driver" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/hls_lfcd_lds_driver/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/hls_lfcd_lds_driver")
+ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/hls_lfcd_lds_driver" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/hls_lfcd_lds_driver/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/hls_lfcd_lds_driver")
 
 # install(FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/hls_lfcd_lds_driver/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/hls_lfcd_lds_driver")
-ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/utils/hls_lfcd_lds_driver" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/hls_lfcd_lds_driver/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/hls_lfcd_lds_driver")
+ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/hls_lfcd_lds_driver" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/hls_lfcd_lds_driver/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/hls_lfcd_lds_driver")
 
 # install(FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/hls_lfcd_lds_driver/ament_cmake_index/share/ament_index/resource_index/packages/hls_lfcd_lds_driver" "DESTINATION" "share/ament_index/resource_index/packages")
-ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/utils/hls_lfcd_lds_driver" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/hls_lfcd_lds_driver/ament_cmake_index/share/ament_index/resource_index/packages/hls_lfcd_lds_driver" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/hls_lfcd_lds_driver" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/hls_lfcd_lds_driver/ament_cmake_index/share/ament_index/resource_index/packages/hls_lfcd_lds_driver" "DESTINATION" "share/ament_index/resource_index/packages")
 
 # install(FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/hls_lfcd_lds_driver/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/hls_lfcd_lds_driver/cmake")
-ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/utils/hls_lfcd_lds_driver" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/hls_lfcd_lds_driver/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/hls_lfcd_lds_driver/cmake")
+ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/hls_lfcd_lds_driver" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/hls_lfcd_lds_driver/ament_cmake_export_dependencies/ament_cmake_export_dependencies-extras.cmake" "DESTINATION" "share/hls_lfcd_lds_driver/cmake")
 
 # install(FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/hls_lfcd_lds_driver/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/hls_lfcd_lds_driver/cmake")
-ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/utils/hls_lfcd_lds_driver" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/hls_lfcd_lds_driver/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/hls_lfcd_lds_driver/cmake")
+ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/hls_lfcd_lds_driver" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/hls_lfcd_lds_driver/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/hls_lfcd_lds_driver/cmake")
 
 # install(FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/hls_lfcd_lds_driver/ament_cmake_core/hls_lfcd_lds_driverConfig.cmake" "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/hls_lfcd_lds_driver/ament_cmake_core/hls_lfcd_lds_driverConfig-version.cmake" "DESTINATION" "share/hls_lfcd_lds_driver/cmake")
-ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/utils/hls_lfcd_lds_driver" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/hls_lfcd_lds_driver/ament_cmake_core/hls_lfcd_lds_driverConfig.cmake" "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/hls_lfcd_lds_driver/ament_cmake_core/hls_lfcd_lds_driverConfig-version.cmake" "DESTINATION" "share/hls_lfcd_lds_driver/cmake")
+ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/hls_lfcd_lds_driver" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/hls_lfcd_lds_driver/ament_cmake_core/hls_lfcd_lds_driverConfig.cmake" "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/hls_lfcd_lds_driver/ament_cmake_core/hls_lfcd_lds_driverConfig-version.cmake" "DESTINATION" "share/hls_lfcd_lds_driver/cmake")
 
-# install(FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/utils/hls_lfcd_lds_driver/package.xml" "DESTINATION" "share/hls_lfcd_lds_driver")
-ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/utils/hls_lfcd_lds_driver" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/utils/hls_lfcd_lds_driver/package.xml" "DESTINATION" "share/hls_lfcd_lds_driver")
+# install(FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/hls_lfcd_lds_driver/package.xml" "DESTINATION" "share/hls_lfcd_lds_driver")
+ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/hls_lfcd_lds_driver" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/hls_lfcd_lds_driver/package.xml" "DESTINATION" "share/hls_lfcd_lds_driver")

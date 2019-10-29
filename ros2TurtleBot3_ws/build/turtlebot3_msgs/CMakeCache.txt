@@ -409,7 +409,7 @@ std_msgs_DIR:PATH=/opt/ros/dashing/share/std_msgs/cmake
 turtlebot3_msgs_BINARY_DIR:STATIC=/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_msgs
 
 //Value Computed by CMake
-turtlebot3_msgs_SOURCE_DIR:STATIC=/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3_msgs
+turtlebot3_msgs_SOURCE_DIR:STATIC=/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3_msgs
 
 //Dependencies for the target
 turtlebot3_msgs__python_LIB_DEPENDS:STATIC=general;/usr/lib/x86_64-linux-gnu/libpython3.6m.so;general;turtlebot3_msgs__rosidl_typesupport_c;general;/opt/ros/dashing/share/action_msgs/cmake/../../../lib/libaction_msgs__python.so;general;/opt/ros/dashing/share/builtin_interfaces/cmake/../../../lib/libbuiltin_interfaces__python.so;general;/opt/ros/dashing/share/unique_identifier_msgs/cmake/../../../lib/libunique_identifier_msgs__python.so;general;/opt/ros/dashing/share/std_msgs/cmake/../../../lib/libstd_msgs__python.so;
@@ -523,7 +523,7 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3_msgs
+CMAKE_HOME_DIRECTORY:INTERNAL=/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3_msgs
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER

@@ -1,4 +1,4 @@
-# Install script for directory: /home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3_msgs
+# Install script for directory: /home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3_msgs
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

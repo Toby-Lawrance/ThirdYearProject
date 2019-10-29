@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/utils/hls_lfcd_lds_driver/include/hls_lfcd_lds_driver/lfcd_laser.hpp
+/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/hls_lfcd_lds_driver/include/hls_lfcd_lds_driver/lfcd_laser.hpp
 string
 -
 sensor_msgs/msg/laser_scan.hpp
@@ -16,7 +16,7 @@ boost/asio.hpp
 boost/array.hpp
 -
 
-/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/utils/hls_lfcd_lds_driver/src/hlds_laser_publisher.cpp
+/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/hls_lfcd_lds_driver/src/hlds_laser_publisher.cpp
 rclcpp/rclcpp.hpp
 -
 sensor_msgs/msg/laser_scan.hpp

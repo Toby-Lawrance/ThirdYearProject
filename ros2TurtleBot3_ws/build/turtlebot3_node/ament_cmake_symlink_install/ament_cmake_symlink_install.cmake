@@ -311,40 +311,40 @@ message(STATUS "Execute custom install script")
 # begin of custom install code
 
 # install(DIRECTORY "param" "DESTINATION" "share/turtlebot3_node")
-ament_cmake_symlink_install_directory("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3/turtlebot3_node" DIRECTORY "param" "DESTINATION" "share/turtlebot3_node")
+ament_cmake_symlink_install_directory("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3_node" DIRECTORY "param" "DESTINATION" "share/turtlebot3_node")
 
 # install("TARGETS" "turtlebot3_ros" "DESTINATION" "lib/turtlebot3_node")
 include("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_node/ament_cmake_symlink_install_targets_0_${CMAKE_INSTALL_CONFIG_NAME}.cmake")
 
 # install(FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_node/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/turtlebot3_node" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
-ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3/turtlebot3_node" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_node/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/turtlebot3_node" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
+ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3_node" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_node/ament_cmake_index/share/ament_index/resource_index/package_run_dependencies/turtlebot3_node" "DESTINATION" "share/ament_index/resource_index/package_run_dependencies")
 
 # install(FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_node/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/turtlebot3_node" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
-ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3/turtlebot3_node" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_node/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/turtlebot3_node" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
+ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3_node" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_node/ament_cmake_index/share/ament_index/resource_index/parent_prefix_path/turtlebot3_node" "DESTINATION" "share/ament_index/resource_index/parent_prefix_path")
 
 # install(FILES "/opt/ros/dashing/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/turtlebot3_node/environment")
-ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3/turtlebot3_node" FILES "/opt/ros/dashing/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/turtlebot3_node/environment")
+ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3_node" FILES "/opt/ros/dashing/share/ament_cmake_core/cmake/environment_hooks/environment/ament_prefix_path.sh" "DESTINATION" "share/turtlebot3_node/environment")
 
 # install(FILES "/opt/ros/dashing/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/turtlebot3_node/environment")
-ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3/turtlebot3_node" FILES "/opt/ros/dashing/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/turtlebot3_node/environment")
+ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3_node" FILES "/opt/ros/dashing/share/ament_cmake_core/cmake/environment_hooks/environment/path.sh" "DESTINATION" "share/turtlebot3_node/environment")
 
 # install(FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_node/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/turtlebot3_node")
-ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3/turtlebot3_node" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_node/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/turtlebot3_node")
+ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3_node" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_node/ament_cmake_environment_hooks/local_setup.bash" "DESTINATION" "share/turtlebot3_node")
 
 # install(FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_node/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/turtlebot3_node")
-ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3/turtlebot3_node" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_node/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/turtlebot3_node")
+ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3_node" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_node/ament_cmake_environment_hooks/local_setup.sh" "DESTINATION" "share/turtlebot3_node")
 
 # install(FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_node/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/turtlebot3_node")
-ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3/turtlebot3_node" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_node/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/turtlebot3_node")
+ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3_node" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_node/ament_cmake_environment_hooks/local_setup.zsh" "DESTINATION" "share/turtlebot3_node")
 
 # install(FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_node/ament_cmake_index/share/ament_index/resource_index/packages/turtlebot3_node" "DESTINATION" "share/ament_index/resource_index/packages")
-ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3/turtlebot3_node" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_node/ament_cmake_index/share/ament_index/resource_index/packages/turtlebot3_node" "DESTINATION" "share/ament_index/resource_index/packages")
+ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3_node" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_node/ament_cmake_index/share/ament_index/resource_index/packages/turtlebot3_node" "DESTINATION" "share/ament_index/resource_index/packages")
 
 # install(FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_node/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/turtlebot3_node/cmake")
-ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3/turtlebot3_node" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_node/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/turtlebot3_node/cmake")
+ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3_node" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_node/ament_cmake_export_include_directories/ament_cmake_export_include_directories-extras.cmake" "DESTINATION" "share/turtlebot3_node/cmake")
 
 # install(FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_node/ament_cmake_core/turtlebot3_nodeConfig.cmake" "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_node/ament_cmake_core/turtlebot3_nodeConfig-version.cmake" "DESTINATION" "share/turtlebot3_node/cmake")
-ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3/turtlebot3_node" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_node/ament_cmake_core/turtlebot3_nodeConfig.cmake" "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_node/ament_cmake_core/turtlebot3_nodeConfig-version.cmake" "DESTINATION" "share/turtlebot3_node/cmake")
+ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3_node" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_node/ament_cmake_core/turtlebot3_nodeConfig.cmake" "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_node/ament_cmake_core/turtlebot3_nodeConfig-version.cmake" "DESTINATION" "share/turtlebot3_node/cmake")
 
-# install(FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3/turtlebot3_node/package.xml" "DESTINATION" "share/turtlebot3_node")
-ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3/turtlebot3_node" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3/turtlebot3_node/package.xml" "DESTINATION" "share/turtlebot3_node")
+# install(FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3_node/package.xml" "DESTINATION" "share/turtlebot3_node")
+ament_cmake_symlink_install_files("/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3_node" FILES "/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3_node/package.xml" "DESTINATION" "share/turtlebot3_node")

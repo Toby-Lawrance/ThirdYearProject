@@ -1,22 +1,22 @@
 Determining if the pthread_create exist failed with the following output:
 Change Dir: /home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_f6785/fast"
-/usr/bin/make -f CMakeFiles/cmTC_f6785.dir/build.make CMakeFiles/cmTC_f6785.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_9e487/fast"
+/usr/bin/make -f CMakeFiles/cmTC_9e487.dir/build.make CMakeFiles/cmTC_9e487.dir/build
 make[1]: Entering directory '/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_f6785.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_f6785.dir/CheckSymbolExists.c.o   -c /home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_f6785
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_f6785.dir/link.txt --verbose=1
-/usr/bin/cc      CMakeFiles/cmTC_f6785.dir/CheckSymbolExists.c.o  -o cmTC_f6785 
-CMakeFiles/cmTC_f6785.dir/CheckSymbolExists.c.o: In function `main':
+Building C object CMakeFiles/cmTC_9e487.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_9e487.dir/CheckSymbolExists.c.o   -c /home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_9e487
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_9e487.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_9e487.dir/CheckSymbolExists.c.o  -o cmTC_9e487 
+CMakeFiles/cmTC_9e487.dir/CheckSymbolExists.c.o: In function `main':
 CheckSymbolExists.c:(.text+0x1b): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_f6785.dir/build.make:97: recipe for target 'cmTC_f6785' failed
-make[1]: *** [cmTC_f6785] Error 1
+CMakeFiles/cmTC_9e487.dir/build.make:97: recipe for target 'cmTC_9e487' failed
+make[1]: *** [cmTC_9e487] Error 1
 make[1]: Leaving directory '/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_f6785/fast' failed
-make: *** [cmTC_f6785/fast] Error 2
+Makefile:126: recipe for target 'cmTC_9e487/fast' failed
+make: *** [cmTC_9e487/fast] Error 2
 
 File /home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
@@ -36,20 +36,20 @@ int main(int argc, char** argv)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_335c4/fast"
-/usr/bin/make -f CMakeFiles/cmTC_335c4.dir/build.make CMakeFiles/cmTC_335c4.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_3528a/fast"
+/usr/bin/make -f CMakeFiles/cmTC_3528a.dir/build.make CMakeFiles/cmTC_3528a.dir/build
 make[1]: Entering directory '/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_335c4.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_335c4.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
-Linking C executable cmTC_335c4
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_335c4.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_335c4.dir/CheckFunctionExists.c.o  -o cmTC_335c4 -lpthreads 
+Building C object CMakeFiles/cmTC_3528a.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_3528a.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.10/Modules/CheckFunctionExists.c
+Linking C executable cmTC_3528a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_3528a.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_3528a.dir/CheckFunctionExists.c.o  -o cmTC_3528a -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-CMakeFiles/cmTC_335c4.dir/build.make:97: recipe for target 'cmTC_335c4' failed
-make[1]: *** [cmTC_335c4] Error 1
+CMakeFiles/cmTC_3528a.dir/build.make:97: recipe for target 'cmTC_3528a' failed
+make[1]: *** [cmTC_3528a] Error 1
 make[1]: Leaving directory '/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/cpp_pubsub/CMakeFiles/CMakeTmp'
-Makefile:126: recipe for target 'cmTC_335c4/fast' failed
-make: *** [cmTC_335c4/fast] Error 2
+Makefile:126: recipe for target 'cmTC_3528a/fast' failed
+make: *** [cmTC_3528a/fast] Error 2
 
 

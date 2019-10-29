@@ -1,4 +1,4 @@
-# Install script for directory: /home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/utils/DynamixelSDK/dynamixel_sdk
+# Install script for directory: /home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/DynamixelSDK/dynamixel_sdk
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

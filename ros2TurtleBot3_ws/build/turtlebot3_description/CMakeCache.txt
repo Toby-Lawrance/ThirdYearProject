@@ -280,7 +280,7 @@ tinyxml_vendor_DIR:PATH=/opt/ros/dashing/share/tinyxml_vendor/cmake
 turtlebot3_description_BINARY_DIR:STATIC=/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_description
 
 //Value Computed by CMake
-turtlebot3_description_SOURCE_DIR:STATIC=/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3/turtlebot3_description
+turtlebot3_description_SOURCE_DIR:STATIC=/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3_description
 
 //The directory containing a CMake configuration file for urdf.
 urdf_DIR:PATH=/opt/ros/dashing/share/urdf/cmake
@@ -370,7 +370,7 @@ CMAKE_GENERATOR_PLATFORM:INTERNAL=
 CMAKE_GENERATOR_TOOLSET:INTERNAL=
 //Source directory with the top level CMakeLists.txt file for this
 // project
-CMAKE_HOME_DIRECTORY:INTERNAL=/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3/turtlebot3_description
+CMAKE_HOME_DIRECTORY:INTERNAL=/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/turtlebot3/turtlebot3_description
 //Install .so files without execute permission.
 CMAKE_INSTALL_SO_NO_EXE:INTERNAL=1
 //ADVANCED property for variable: CMAKE_LINKER

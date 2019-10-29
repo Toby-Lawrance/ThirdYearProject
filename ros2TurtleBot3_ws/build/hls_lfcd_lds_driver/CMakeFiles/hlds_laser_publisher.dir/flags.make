@@ -6,5 +6,5 @@ CXX_FLAGS =   -Wall -Wextra -Wpedantic -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/utils/hls_lfcd_lds_driver/include -I/opt/ros/dashing/include 
+CXX_INCLUDES = -I/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/hls_lfcd_lds_driver/include -I/opt/ros/dashing/include 
 
