@@ -1,7 +1,5 @@
 #include <iostream>
-#include <string>   // for strings
-#include <iomanip>  // for controlling float print precision
-#include <sstream>  // string to number conversion
+#include <chrono>
 
 #include <opencv2/core.hpp>     // Basic OpenCV structures (cv::Mat, Scalar)
 #include <opencv2/imgproc.hpp>  // Gaussian Blur
@@ -10,11 +8,11 @@
 
 using namespace std;
 using namespace cv;
-
+using namespace chrono;
 
 int main(int argc, char* argv[])
 {
-	VideoCapture cap(0);
+	VideoCapture cap(CAP_DSHOW);
 
 	if(!cap.isOpened())
 	{
@@ -22,15 +20,18 @@ int main(int argc, char* argv[])
 		return -1;
 	}
 
-	//cap.set(CAP_PROP_FRAME_HEIGHT, 320);
-	//cap.set(CAP_PROP_FRAME_WIDTH, 320);
+	cap.set(CAP_PROP_FRAME_WIDTH, 640);
+	cap.set(CAP_PROP_FRAME_HEIGHT, 360);
+	cap.set(CAP_PROP_FPS, 24);
 
 	int frame_width = static_cast<int>(cap.get(CAP_PROP_FRAME_WIDTH)); //get the width of frames of the video
 	int frame_height = static_cast<int>(cap.get(CAP_PROP_FRAME_HEIGHT)); //get the height of frames of the video
-	int frames_per_second = 30;//cap.get(CAP_PROP_XI_FRAMERATE);
+	int frames_per_second = static_cast<int>(cap.get(CAP_PROP_FPS));//cap.get(CAP_PROP_XI_FRAMERATE);
 
+	cout << "Frame dimensions: " << frame_width << "x" << frame_height << endl;
+	cout << "FPS: " << frames_per_second << endl;
+	
 	Size frame_size(frame_width, frame_height);
-	//int frames_per_second = 15;
 
 	//Create and initialize the VideoWriter object 
 	VideoWriter videoWriter("tracking.avi", VideoWriter::fourcc('M', 'J', 'P', 'G'),
@@ -44,8 +45,8 @@ int main(int argc, char* argv[])
 	
 	namedWindow("Control", WINDOW_AUTOSIZE);
 
-	int iLowH = 0;
-	int iHighH = 9;
+	int iLowH = 162;
+	int iHighH = 179;
 
 	int iLowS = 193;
 	int iHighS = 255;
@@ -70,6 +71,11 @@ int main(int argc, char* argv[])
 	cap.read(imgTmp);
 
 	Mat imgLines = Mat::zeros(imgTmp.size(), CV_8UC3);
+
+	double activeFrameRate;
+	
+	high_resolution_clock hrc;
+	auto lastFrame = hrc.now();
 	
 	while(true)
 	{
@@ -85,7 +91,7 @@ int main(int argc, char* argv[])
 
 		Mat imgHSV;
 		cvtColor(imgOriginal, imgHSV, COLOR_BGR2HSV);
-		GaussianBlur(imgHSV, imgHSV, Size(3, 3), 0);
+		//GaussianBlur(imgHSV, imgHSV, Size(3, 3), 0);
 		Mat imgThresholded;
 		Mat imgEroded;
 
@@ -118,12 +124,22 @@ int main(int argc, char* argv[])
 			LastX = posX;
 			LastY = posY;
 		}
-
 		imgOriginal = imgOriginal + imgLines;
 		
+		auto timeNow = hrc.now();
+		activeFrameRate = floor((1000.0/duration_cast<milliseconds>(timeNow - lastFrame).count())*100) / 100;
+		lastFrame = timeNow;
+
+		string fps = std::to_string(activeFrameRate) + "FPS";
+		int font = FONT_HERSHEY_SCRIPT_SIMPLEX;
+		Size textSize = getTextSize(fps, font, 1, 3, 0);
+		Point textLoc(0,textSize.height);
+		putText(imgOriginal, fps, textLoc, font, 1, Scalar::all(75), 2, 8);
+		
 		videoWriter.write(imgOriginal);
-		imshow("Thresholded Image", imgThresholded); //show the thresholded image
-		imshow("Eroded", imgEroded);
+		
+		//imshow("Thresholded Image", imgThresholded); //show the thresholded image
+		//imshow("Eroded", imgEroded);
 		imshow("Original", imgOriginal); //show the original image
 	}
 	cap.release();
