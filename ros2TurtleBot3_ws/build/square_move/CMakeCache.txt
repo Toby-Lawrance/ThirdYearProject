@@ -214,7 +214,7 @@ PYTHON_VERSION:STRING=
 SITE:STRING=vero
 
 //Path to a library.
-_lib:FILEPATH=/opt/ros/dashing/lib/libstd_msgs__rosidl_typesupport_opensplice_cpp.so
+_lib:FILEPATH=/opt/ros/dashing/lib/libgeometry_msgs__rosidl_typesupport_opensplice_cpp.so
 
 //The directory containing a CMake configuration file for ament_cmake.
 ament_cmake_DIR:PATH=/opt/ros/dashing/share/ament_cmake/cmake
@@ -306,6 +306,9 @@ ament_xmllint_BIN:FILEPATH=/opt/ros/dashing/bin/ament_xmllint
 //The directory containing a CMake configuration file for builtin_interfaces.
 builtin_interfaces_DIR:PATH=/opt/ros/dashing/share/builtin_interfaces/cmake
 
+//The directory containing a CMake configuration file for geometry_msgs.
+geometry_msgs_DIR:PATH=/opt/ros/dashing/share/geometry_msgs/cmake
+
 //The directory containing a CMake configuration file for rcl.
 rcl_DIR:PATH=/opt/ros/dashing/share/rcl/cmake
 
@@ -374,6 +377,9 @@ square_move_SOURCE_DIR:STATIC=/home/toby/ThirdYearProject/ros2TurtleBot3_ws/src/
 
 //The directory containing a CMake configuration file for std_msgs.
 std_msgs_DIR:PATH=/opt/ros/dashing/share/std_msgs/cmake
+
+//The directory containing a CMake configuration file for turtlebot3_node.
+turtlebot3_node_DIR:PATH=/home/toby/ThirdYearProject/ros2TurtleBot3_ws/install/turtlebot3_node/share/turtlebot3_node/cmake
 
 //Path to a program.
 xmllint_BIN:FILEPATH=/usr/bin/xmllint

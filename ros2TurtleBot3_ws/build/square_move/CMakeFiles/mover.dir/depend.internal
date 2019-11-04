@@ -9,6 +9,11 @@ CMakeFiles/mover.dir/src/mover.cpp.o
  /opt/ros/dashing/include/builtin_interfaces/msg/time.hpp
  /opt/ros/dashing/include/builtin_interfaces/msg/time__struct.hpp
  /opt/ros/dashing/include/builtin_interfaces/msg/time__traits.hpp
+ /opt/ros/dashing/include/geometry_msgs/msg/twist.hpp
+ /opt/ros/dashing/include/geometry_msgs/msg/twist__struct.hpp
+ /opt/ros/dashing/include/geometry_msgs/msg/twist__traits.hpp
+ /opt/ros/dashing/include/geometry_msgs/msg/vector3__struct.hpp
+ /opt/ros/dashing/include/geometry_msgs/msg/vector3__traits.hpp
  /opt/ros/dashing/include/rcl/allocator.h
  /opt/ros/dashing/include/rcl/arguments.h
  /opt/ros/dashing/include/rcl/client.h

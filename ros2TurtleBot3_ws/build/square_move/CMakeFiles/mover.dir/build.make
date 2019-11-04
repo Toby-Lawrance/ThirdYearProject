@@ -118,11 +118,6 @@ mover: /opt/ros/dashing/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_c
 mover: /opt/ros/dashing/lib/libbuiltin_interfaces__rosidl_typesupport_fastrtps_cpp.so
 mover: /opt/ros/dashing/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_c.so
 mover: /opt/ros/dashing/lib/libbuiltin_interfaces__rosidl_typesupport_introspection_cpp.so
-mover: /opt/ros/dashing/lib/librosidl_typesupport_c.so
-mover: /opt/ros/dashing/lib/librosidl_typesupport_cpp.so
-mover: /opt/ros/dashing/lib/librosidl_generator_c.so
-mover: /opt/ros/dashing/lib/librosidl_typesupport_introspection_c.so
-mover: /opt/ros/dashing/lib/librosidl_typesupport_introspection_cpp.so
 mover: /opt/ros/dashing/lib/libstd_msgs__rosidl_generator_c.so
 mover: /opt/ros/dashing/lib/libstd_msgs__rosidl_typesupport_c.so
 mover: /opt/ros/dashing/lib/libstd_msgs__rosidl_typesupport_cpp.so
@@ -130,6 +125,18 @@ mover: /opt/ros/dashing/lib/libstd_msgs__rosidl_typesupport_introspection_c.so
 mover: /opt/ros/dashing/lib/libstd_msgs__rosidl_typesupport_introspection_cpp.so
 mover: /opt/ros/dashing/lib/libstd_msgs__rosidl_typesupport_fastrtps_c.so
 mover: /opt/ros/dashing/lib/libstd_msgs__rosidl_typesupport_fastrtps_cpp.so
+mover: /opt/ros/dashing/lib/librosidl_typesupport_c.so
+mover: /opt/ros/dashing/lib/librosidl_typesupport_cpp.so
+mover: /opt/ros/dashing/lib/librosidl_generator_c.so
+mover: /opt/ros/dashing/lib/librosidl_typesupport_introspection_c.so
+mover: /opt/ros/dashing/lib/librosidl_typesupport_introspection_cpp.so
+mover: /opt/ros/dashing/lib/libgeometry_msgs__rosidl_typesupport_c.so
+mover: /opt/ros/dashing/lib/libgeometry_msgs__rosidl_typesupport_cpp.so
+mover: /opt/ros/dashing/lib/libgeometry_msgs__rosidl_generator_c.so
+mover: /opt/ros/dashing/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_c.so
+mover: /opt/ros/dashing/lib/libgeometry_msgs__rosidl_typesupport_fastrtps_cpp.so
+mover: /opt/ros/dashing/lib/libgeometry_msgs__rosidl_typesupport_introspection_c.so
+mover: /opt/ros/dashing/lib/libgeometry_msgs__rosidl_typesupport_introspection_cpp.so
 mover: CMakeFiles/mover.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/square_move/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable mover"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/mover.dir/link.txt --verbose=$(VERBOSE)
