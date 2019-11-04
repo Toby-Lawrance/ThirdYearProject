@@ -1,0 +1,4 @@
+﻿  VideoProc.cpp
+A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\VideoProcessing\VideoProc.cpp(110,13): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\VideoProcessing\VideoProc.cpp(111,13): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+  VideoProc.vcxproj -> A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\VideoProcessing\Debug\VideoProc.exe

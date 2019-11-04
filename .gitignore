@@ -1,0 +1,12 @@
+.vs
+*.exe
+CMakeCache.txt
+*.cmake
+*.vcxproj*
+*.obj
+*.bin
+*.tlog
+CMakeFiles
+*.sln
+*.pdb
+*.ilk
