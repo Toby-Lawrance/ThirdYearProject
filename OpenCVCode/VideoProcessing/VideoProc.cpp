@@ -17,7 +17,12 @@ int main(int argc, char* argv[])
 	if(!cap.isOpened())
 	{
 		cout << "Cannot open webcam" << endl;
-		return -1;
+		cap.open(0);
+		if(!cap.isOpened())
+		{
+			cout << "Really can't open it" << endl;
+			return -1;
+		}
 	}
 
 	cap.set(CAP_PROP_FRAME_WIDTH, 640);

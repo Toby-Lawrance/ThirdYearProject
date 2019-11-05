@@ -18,6 +18,7 @@
 #include <chrono>
 #include <memory>
 #include <math.h>
+#include <signal.h>
 
 #include <geometry_msgs/msg/twist.hpp>
 #include "rclcpp/rclcpp.hpp"
@@ -29,6 +30,13 @@ using namespace std::chrono_literals;
 /* This example creates a subclass of Node and uses std::bind() to register a
  * member function as a callback from the timer. */
 
+void h_sig_sigint(int signum)
+{
+	std::cout << "Receive signum: " << signum << std::endl;
+	rclcpp::shutdown();
+}
+
+
 class MinimalPublisher : public rclcpp::Node
 {
 public:
@@ -38,8 +46,8 @@ public:
     publisher_ = this->create_publisher<geometry_msgs::msg::Twist>("cmd_vel", 10);
     for(;;)
     {
-      travel(0.2,0.2);
-      rotate(90,0.5);
+      travel(0.2,0.15);
+      rotate(90,0.25);
     }
   }
 
@@ -92,6 +100,8 @@ private:
 int main(int argc, char * argv[])
 {
   rclcpp::init(argc, argv);
+  signal(SIGINT, h_sig_sigint);
+  signal(SIGKILL, h_sig_sigint);
   rclcpp::spin(std::make_shared<MinimalPublisher>());
   rclcpp::shutdown();
   return 0;
