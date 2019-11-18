@@ -1,9 +1,13 @@
 #include <iostream>
 #include <chrono>
+#define _USE_MATH_DEFINES
+#include <math.h>
 
 #include <opencv2/core.hpp>     // Basic OpenCV structures (cv::Mat, Scalar)
 #include <opencv2/imgproc.hpp>  // Gaussian Blur
 #include <opencv2/highgui.hpp>  // OpenCV window I/O
+
+#include "ObjInfo.h"
 
 
 using namespace std;
@@ -118,13 +122,21 @@ int main(int argc, char* argv[])
 
 		if(Area > 10000)
 		{
-			int posX = M10 / Area;
-			int posY = M01 / Area;
+			double posX = M10 / Area;
+			double posY = M01 / Area;
+
+			int size = sqrt(Area / M_PI);
 
 			if(LastX >= 0 && LastY >= 0 && posX >= 0 && posY >= 0)
 			{
-				line(imgLines, Point(posX, posY), Point(LastX, LastY), Scalar(0, 0, 255), 2);
+				//line(imgLines, Point(posX, posY), Point(LastX, LastY), Scalar(0, 0, 255), 2);
 			}
+
+			Point2f center;
+			double radius = 0;
+			
+			
+			circle(imgOriginal, Point(posX, posY), size, Scalar(0, 0, 255));
 
 			LastX = posX;
 			LastY = posY;
