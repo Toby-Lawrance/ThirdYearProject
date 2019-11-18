@@ -1,0 +1,40 @@
+\documentclass[10pt,a4paper]{report}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+% Title Page
+\title{Third Year Project Progress Report}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all fields
+
+\fancyhead[R]{Toby Lawrance, 1731636, \thepage / \pageref{LastPage}}
+\renewcommand{\headrulewidth}{0pt}
+
+\begin{document}
+\maketitle
+\section*{Project Introduction/Specification}
+	\subsection*{Statement}
+		\subsubsection*{In Short:}
+			Implementing Computer Vision algorithms to allow for robot navigation using the camera feed as the primary perception.
+		\subsubsection*{Aims:}
+			The aim of this project is to utilise the camera more efficiently as cameras are typically cheap sensors and this helps make robotics more affordable as a discipline, or at least provide additional ways to aid internal sensor data and provide additional data points of belief in the robot's current pose.
+		\subsubsection*{Objectives:}
+			\begin{itemize}
+				\item Move towards an object that is recognised in the environment. 
+				\item Acknowledge obstacles in the environment and attempt to avoid them.
+				\item Attempt to acknowledge more natural obstacles.
+				\item Attempt to use the camera feed to aid with pose estimation.
+			\end{itemize}
+\section*{Progress made so far}
+	\subsection*{ROS}
+		\subsubsection*{Overview of the Robot Operating System}
+			The Robot Operating System (ROS) is a meta-operating system that runs on top of a regular operating system. It is designed to be highly modular (though one could at times argue too modular) and typically run in a "Publisher -> Subscriber" model, a unit of executable is referred to as a node and is typically recommended as a reusable task, for example "sensor drive, sensor data conversion, obstacle recognition, motor drive, encoder input and navigation"\cite{pyo_ros_en_2017}
+\section*{Future plans}
+
+\section*{Management}
+
+\bibliographystyle{plain}
+\bibliography{ProgressReport}
+
+\end{document}
