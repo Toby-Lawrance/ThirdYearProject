@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.14)  18 NOV 2019 21:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.20 (MiKTeX 2.9.7250 64-bit) (preloaded format=pdflatex 2019.11.14)  24 NOV 2019 08:57
 entering extended mode
 **./ProgressReport.tex
 (ProgressReport.tex
@@ -61,38 +61,63 @@ File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
+("C:\Program Files\MiKTeX 2.9\tex/latex/listings\listings.sty"
+\lst@mode=\count89
+\lst@gtempboxa=\box27
+\lst@token=\toks15
+\lst@length=\count90
+\lst@currlwidth=\dimen105
+\lst@column=\count91
+\lst@pos=\count92
+\lst@lostspace=\dimen106
+\lst@width=\dimen107
+\lst@newlines=\count93
+\lst@lineno=\count94
+\lst@maxwidth=\dimen108
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstmisc.sty"
+File: lstmisc.sty 2019/09/10 1.8c (Carsten Heinz)
+\c@lstnumber=\count95
+\lst@skipnumbers=\count96
+\lst@framebox=\box28
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/listings\listings.cfg"
+File: listings.cfg 2019/09/10 1.8c listings configuration
+))
+Package: listings 2019/09/10 1.8c (Carsten Heinz)
+
 (ProgressReport.aux)
 \openout1 = `ProgressReport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
-LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 18.
+LaTeX Font Info:    ... okay on input line 18.
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 17.
+(lastpage)             ! on input line 18.
 
 ("C:\Program Files\MiKTeX 2.9\tex/context/base/mkii\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count89
-\scratchdimen=\dimen105
-\scratchbox=\box27
-\nofMPsegments=\count90
-\nofMParguments=\count91
-\everyMPshowfont=\toks15
-\MPscratchCnt=\count92
-\MPscratchDim=\dimen106
-\MPnumerator=\count93
-\makeMPintoPDFobject=\count94
-\everyMPtoPDFconversion=\toks16
+\scratchcounter=\count97
+\scratchdimen=\dimen109
+\scratchbox=\box29
+\nofMPsegments=\count98
+\nofMParguments=\count99
+\everyMPshowfont=\toks16
+\MPscratchCnt=\count100
+\MPscratchDim=\dimen110
+\MPnumerator=\count101
+\makeMPintoPDFobject=\count102
+\everyMPtoPDFconversion=\toks17
 ) ("C:\Program Files\MiKTeX 2.9\tex/latex/oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -142,12 +167,13 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
+\c@lstlisting=\count103
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 18.
+(Font)              <12> on input line 19.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 18.
+(Font)              <8> on input line 19.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 18.
+(Font)              <6> on input line 19.
 
 
 LaTeX Warning: No \author given.
@@ -155,53 +181,226 @@ LaTeX Warning: No \author given.
 [1
 
 {C:/Users/tobyl/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 2
-7.
+<./images/BuiltRobot.jpg, id=7, 4047.12pt x 3035.34pt>
+File: ./images/BuiltRobot.jpg Graphic file (type jpg)
+<use ./images/BuiltRobot.jpg>
+Package pdftex.def Info: ./images/BuiltRobot.jpg  used on input line 37.
+(pdftex.def)             Requested size: 202.36786pt x 151.7759pt.
+ [1 <./images/BuiltRobot.jpg>]
+<./images/RosDistro.png, id=14, 600.74437pt x 1182.66844pt>
+File: ./images/RosDistro.png Graphic file (type png)
+<use ./images/RosDistro.png>
+Package pdftex.def Info: ./images/RosDistro.png  used on input line 50.
+(pdftex.def)             Requested size: 300.37144pt x 591.33278pt.
+<./images/ROS2Distro.png, id=16, 499.11469pt x 622.57594pt>
+File: ./images/ROS2Distro.png Graphic file (type png)
+<use ./images/ROS2Distro.png>
+Package pdftex.def Info: ./images/ROS2Distro.png  used on input line 52.
+(pdftex.def)             Requested size: 249.55672pt x 311.2872pt.
+<./images/TurtleBot3SupportedDistributions.png, id=17, 239.39438pt x 331.99031p
+t>
+File: ./images/TurtleBot3SupportedDistributions.png Graphic file (type png)
+<use ./images/TurtleBot3SupportedDistributions.png>
+Package pdftex.def Info: ./images/TurtleBot3SupportedDistributions.png  used on
+ input line 55.
+(pdftex.def)             Requested size: 179.54533pt x 248.99211pt.
 
-("C:\Program Files\MiKTeX 2.9\tex/latex/base\omscmr.fd"
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
-)
-LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 27.
-<./images/RedCube.jpg, id=7, 1003.75pt x 1003.75pt>
+Underfull \hbox (badness 10000) in paragraph at lines 49--57
+
+ []
+
+[2] [3 <./images/RosDistro.png>] [4 <./images/ROS2Distro.png>] [5 <./images/Tur
+tleBot3SupportedDistributions.png>]
+<./images/TrackingExampleScreenshot.png, id=33, 1445.4pt x 782.925pt>
+File: ./images/TrackingExampleScreenshot.png Graphic file (type png)
+<use ./images/TrackingExampleScreenshot.png>
+Package pdftex.def Info: ./images/TrackingExampleScreenshot.png  used on input 
+line 69.
+(pdftex.def)             Requested size: 361.34912pt x 195.73077pt.
+
+Overfull \hbox (16.34912pt too wide) in paragraph at lines 67--71
+[] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 72--73
+
+ []
+
+[6 <./images/TrackingExampleScreenshot.png>] [7]
+<./images/RedCube.jpg, id=41, 1003.75pt x 1003.75pt>
 File: ./images/RedCube.jpg Graphic file (type jpg)
 <use ./images/RedCube.jpg>
-Package pdftex.def Info: ./images/RedCube.jpg  used on input line 41.
+Package pdftex.def Info: ./images/RedCube.jpg  used on input line 119.
 (pdftex.def)             Requested size: 200.74644pt x 200.74644pt.
- [1]
-Overfull \hbox (1.19496pt too wide) in paragraph at lines 60--61
+ [8 <./images/RedCube.jpg>]
+Overfull \hbox (1.19496pt too wide) in paragraph at lines 143--144
 \OT1/cmr/m/n/10 These ex-per-i-ments will re-quire a few re-sources to ex-e-cut
 e, thought they shouldn't
  []
 
-[2 <./images/RedCube.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 76--77
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 159--160
 
  []
 
-[3] (ProgressReport.bbl [4]) 
+LaTeX Font Info:    Trying to load font information for OMS+cmr on input line 1
+61.
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 161.
+ [10]
+("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstlang1.sty"
+File: lstlang1.sty 2019/09/10 1.8c listings language file
+)
+("C:\Program Files\MiKTeX 2.9\tex/latex/listings\lstlang1.sty"
+File: lstlang1.sty 2019/09/10 1.8c listings language file
+)
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <7> on input line 171.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <5> on input line 171.
+LaTeX Font Info:    Trying to load font information for OML+cmr on input line 1
+80.
+
+("C:\Program Files\MiKTeX 2.9\tex/latex/base\omlcmr.fd"
+File: omlcmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OML/cmr/m/n' in size <10> not available
+(Font)              Font shape `OML/cmm/m/it' tried instead on input line 180.
+
+Overfull \hbox (111.00464pt too wide) in paragraph at lines 180--182
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (27.00378pt too wide) in paragraph at lines 183--184
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (3.00354pt too wide) in paragraph at lines 188--189
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (249.00604pt too wide) in paragraph at lines 190--192
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (567.00928pt too wide) in paragraph at lines 192--194
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
+][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (27.00378pt too wide) in paragraph at lines 202--204
+[][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (297.00653pt too wide) in paragraph at lines 204--205
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (27.00378pt too wide) in paragraph at lines 206--207
+[][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (135.00488pt too wide) in paragraph at lines 207--208
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (111.00464pt too wide) in paragraph at lines 208--209
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (81.00433pt too wide) in paragraph at lines 209--210
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (93.00446pt too wide) in paragraph at lines 210--212
+[][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (15.00366pt too wide) in paragraph at lines 213--214
+[][][][][][][][][][][] 
+ []
+
+[11]
+Overfull \hbox (9.0036pt too wide) in paragraph at lines 216--217
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (3.00354pt too wide) in paragraph at lines 219--220
+[][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (69.00421pt too wide) in paragraph at lines 220--221
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (33.00385pt too wide) in paragraph at lines 221--222
+[][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (15.00366pt too wide) in paragraph at lines 224--225
+[][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (15.00366pt too wide) in paragraph at lines 225--226
+[][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (345.00702pt too wide) in paragraph at lines 236--237
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (105.00458pt too wide) in paragraph at lines 241--242
+[][][][][][][][][][][][][][][][][][][][] 
+ []
+
+(ProgressReport.bbl [12]) 
 AED: lastpage setting LastPage
-[5
+[13
 
 ] (ProgressReport.aux) ) 
 Here is how much of TeX's memory you used:
- 1736 strings out of 492450
- 24620 string characters out of 3129748
- 93554 words of memory out of 3000000
- 6088 multiletter control sequences out of 15000+200000
- 8847 words of font info for 31 fonts, out of 3000000 for 9000
+ 3624 strings out of 492450
+ 49642 string characters out of 3129748
+ 334302 words of memory out of 3000000
+ 7954 multiletter control sequences out of 15000+200000
+ 9148 words of font info for 32 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 55i,11n,45p,652b,258s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 55i,12n,51p,809b,1739s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfont
 s/cm/cmbx10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmb
-x12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><
-C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/M
-iKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on ProgressReport.pdf (6 pages, 142229 bytes).
+x12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb
+><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Pro
+gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program File
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 
+2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Program Files/MiKTeX 2.9/fonts
+/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/p
+ublic/amsfonts/cm/cmti10.pfb>
+Output written on ProgressReport.pdf (14 pages, 5376195 bytes).
 PDF statistics:
- 50 PDF objects out of 1000 (max. 8388607)
+ 94 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

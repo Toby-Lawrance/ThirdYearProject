@@ -1,8 +1,14 @@
 This is BibTeX, Version 0.99dThe top-level auxiliary file: ProgressReport.aux
-The style file: plain.bst
+The style file: acm.bst
 Database file #1: ProgressReport.bib
-Too many commas in name 1 of "Yoonseok Pyo, Hancheol Cho, Leon Jung, Darby Lim" for entry pyo_ros_en_2017
-while executing---line 1049 of file plain.bst
-Too many commas in name 1 of "Yoonseok Pyo, Hancheol Cho, Leon Jung, Darby Lim" for entry pyo_ros_en_2017
-while executing---line 1090 of file plain.bst
-(There were 2 error messages)
+Warning--entry type for "ros_distros" isn't style-file defined
+--line 12 of file ProgressReport.bib
+Warning--entry type for "ros2_distros" isn't style-file defined
+--line 18 of file ProgressReport.bib
+Warning--entry type for "robotis_emanual" isn't style-file defined
+--line 24 of file ProgressReport.bib
+Warning--entry type for "turtlebot3_specs" isn't style-file defined
+--line 30 of file ProgressReport.bib
+Warning--entry type for "Kinetic_install" isn't style-file defined
+--line 36 of file ProgressReport.bib
+(There were 5 warnings)
