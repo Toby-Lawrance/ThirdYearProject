@@ -1,0 +1,17 @@
+.vs
+*.exe
+CMakeCache.txt
+*.cmake
+*.vcxproj*
+*.obj
+*.bin
+*.tlog
+CMakeFiles
+*.sln
+*.pdb
+*.ilk
+./installation/
+./opencv/
+./opencv_contrib/
+./OpenCV-master-py3/
+

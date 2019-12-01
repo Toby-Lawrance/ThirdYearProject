@@ -1,0 +1,28 @@
+\begin{thebibliography}{1}
+
+\bibitem{ros2_distros}
+{\sc Generated}.
+\newblock Distributions - ros2 wiki.
+
+\bibitem{ros_distros}
+{\sc GvdHoorn}.
+\newblock Distributions - ros wiki.
+
+\bibitem{pyo_ros_en_2017}
+{\sc Pyo, Y.}
+\newblock {\em ROS Robot Programming (English)}.
+\newblock ROBOTIS, 12 2017.
+
+\bibitem{turtlebot3_specs}
+{\sc robotis}.
+\newblock Turtlebot3 hardware specifications.
+
+\bibitem{robotis_emanual}
+{\sc robotis}.
+\newblock Turtlebot3 overview.
+
+\bibitem{Kinetic_install}
+{\sc TllyFoote}.
+\newblock kinetic/installation - ros wiki.
+
+\end{thebibliography}

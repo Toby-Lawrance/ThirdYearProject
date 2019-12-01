@@ -1,0 +1,14 @@
+This is BibTeX, Version 0.99dThe top-level auxiliary file: ProgressReport.aux
+The style file: acm.bst
+Database file #1: ProgressReport.bib
+Warning--entry type for "ros_distros" isn't style-file defined
+--line 12 of file ProgressReport.bib
+Warning--entry type for "ros2_distros" isn't style-file defined
+--line 18 of file ProgressReport.bib
+Warning--entry type for "robotis_emanual" isn't style-file defined
+--line 24 of file ProgressReport.bib
+Warning--entry type for "turtlebot3_specs" isn't style-file defined
+--line 30 of file ProgressReport.bib
+Warning--entry type for "Kinetic_install" isn't style-file defined
+--line 36 of file ProgressReport.bib
+(There were 5 warnings)
