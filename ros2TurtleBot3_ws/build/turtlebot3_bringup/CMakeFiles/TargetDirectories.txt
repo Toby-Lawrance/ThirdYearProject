@@ -1,8 +1,0 @@
-/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_bringup/CMakeFiles/install/strip.dir
-/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_bringup/CMakeFiles/install/local.dir
-/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_bringup/CMakeFiles/test.dir
-/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_bringup/CMakeFiles/list_install_components.dir
-/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_bringup/CMakeFiles/uninstall.dir
-/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_bringup/CMakeFiles/edit_cache.dir
-/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_bringup/CMakeFiles/rebuild_cache.dir
-/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/turtlebot3_bringup/CMakeFiles/install.dir

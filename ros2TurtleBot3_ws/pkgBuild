@@ -1,3 +1,0 @@
-cd ~/ThirdYearProject/ros2TurtleBot3_ws/
-colcon build --symlink-install --packages-select $1
-source install/setup.bash

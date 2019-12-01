@@ -1,9 +1,0 @@
-/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/dynamixel_sdk/CMakeFiles/install/strip.dir
-/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/dynamixel_sdk/CMakeFiles/install.dir
-/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/dynamixel_sdk/CMakeFiles/dynamixel_sdk.dir
-/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/dynamixel_sdk/CMakeFiles/install/local.dir
-/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/dynamixel_sdk/CMakeFiles/test.dir
-/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/dynamixel_sdk/CMakeFiles/list_install_components.dir
-/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/dynamixel_sdk/CMakeFiles/uninstall.dir
-/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/dynamixel_sdk/CMakeFiles/edit_cache.dir
-/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/dynamixel_sdk/CMakeFiles/rebuild_cache.dir

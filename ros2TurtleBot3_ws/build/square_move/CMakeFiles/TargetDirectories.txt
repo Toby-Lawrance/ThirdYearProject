@@ -1,9 +1,0 @@
-/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/square_move/CMakeFiles/install.dir
-/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/square_move/CMakeFiles/install/strip.dir
-/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/square_move/CMakeFiles/mover.dir
-/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/square_move/CMakeFiles/edit_cache.dir
-/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/square_move/CMakeFiles/uninstall.dir
-/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/square_move/CMakeFiles/install/local.dir
-/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/square_move/CMakeFiles/test.dir
-/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/square_move/CMakeFiles/list_install_components.dir
-/home/toby/ThirdYearProject/ros2TurtleBot3_ws/build/square_move/CMakeFiles/rebuild_cache.dir
