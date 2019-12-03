@@ -1,6 +1,0 @@
-[submodule "ros2OnLaptop_ws"]
-	path = ros2OnLaptop_ws
-	url = git@github.com:Toby-Lawrance/ros2OnLaptop_ws.git
-[submodule "ros2OnBot_ws"]
-	path = ros2OnBot_ws
-	url = git@github.com:Toby-Lawrance/ros2OnBot_ws.git
