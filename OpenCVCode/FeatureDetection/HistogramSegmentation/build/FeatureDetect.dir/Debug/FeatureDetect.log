@@ -1,5 +1,5 @@
 ﻿  FeatureDetect.cpp
-A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(159,69): warning C4244: 'argument': conversion from '_Ty' to '_Tp', possible loss of data
+A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(163,69): warning C4244: 'argument': conversion from '_Ty' to '_Tp', possible loss of data
           with
           [
               _Ty=float
@@ -8,7 +8,7 @@ A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetectio
           [
               _Tp=int
           ]
-A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(160,65): warning C4244: 'argument': conversion from '_Ty' to '_Tp', possible loss of data
+A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(164,65): warning C4244: 'argument': conversion from '_Ty' to '_Tp', possible loss of data
           with
           [
               _Ty=float
@@ -17,8 +17,8 @@ A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetectio
           [
               _Tp=int
           ]
-A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(239,84): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(240,84): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(245,67): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(246,67): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(244,84): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(245,84): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(250,67): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(251,67): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
   FeatureDetect.vcxproj -> A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\build\Debug\FeatureDetect.exe
