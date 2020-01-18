@@ -32,7 +32,7 @@ bool Initialise_Camera(VideoCapture cap, VideoWriter& videoWriter, int& value1)
 
 	cap.set(CAP_PROP_FRAME_WIDTH, 640);
 	cap.set(CAP_PROP_FRAME_HEIGHT, 360);
-	cap.set(CAP_PROP_FPS, 10);
+	cap.set(CAP_PROP_FPS, 60);
 
 	frame_width = static_cast<int>(cap.get(CAP_PROP_FRAME_WIDTH)); //get the width of frames of the video
 	frame_height = static_cast<int>(cap.get(CAP_PROP_FRAME_HEIGHT)); //get the height of frames of the video
@@ -102,6 +102,27 @@ void graphing(int h_bins, int s_bins, int l_bins, vector<Mat> hsv_planes)
 	}
 }
 
+float calcThreshold(vector<float> data,float factor = 100.0)
+{
+	float max = 0;
+	float min = FP_INFINITE;
+
+	for(auto it = data.begin(); it != data.end(); ++it)
+	{
+		float val = *it;
+		if(val > max)
+		{
+			max = val;
+		}
+		if(val < min)
+		{
+			min = val;
+		}
+	}
+
+	return (max - min)/factor;
+}
+
 vector<float> applyExponentialFilter(vector<float> data,float alpha)
 {
 	vector<float> filtered = vector<float>(data);
@@ -112,25 +133,48 @@ vector<float> applyExponentialFilter(vector<float> data,float alpha)
 	return filtered;
 }
 
-vector<int> changeDetect(vector<float> data, float threshold, bool topTwo = false)
+vector<int> applyExponentialFilter(vector<int> data, float alpha)
+{
+	vector<int> filtered = vector<int>(data);
+	for (int i = 1; i < data.size(); ++i)
+	{
+		filtered[i] = alpha * filtered[i - 1] + (1 - alpha) * data[i];
+	}
+	return filtered;
+}
+
+vector<float> changeValue(vector<float> data)
 {
 	vector<float> change_values;
-	for(auto it = data.begin(); it != (data.end()-1); ++it)
+	for (auto it = data.begin(); it != (data.end() - 1); ++it)
 	{
-		change_values.push_back(abs(*(it+1) - *it));
+		change_values.push_back(abs(*(it + 1) - *it));
 	}
+	return change_values;
+}
+
+vector<int> changeDetect(vector<float> change_values, float threshold, bool topTwo = false)
+{
+	cout << "Threshold: " << threshold << endl;
 	if(!topTwo)
 	{
-		vector<int> trigger_points;
+		int max = 0, min = change_values.size();
 		for (int i = 0; i < change_values.size(); ++i)
 		{
 			auto val = change_values[i];
 			if (val > threshold)
 			{
-				trigger_points.push_back(i + 1);
+				if(i > max)
+				{
+					max = i;
+				}
+				if(i < min)
+				{
+					min = i;
+				}
 			}
 		}
-		return trigger_points;
+		return vector<int>({ min, max });
 	} else
 	{
 		int maxIndex = 0, secondMaxIndex = 0;
@@ -151,18 +195,18 @@ vector<int> changeDetect(vector<float> data, float threshold, bool topTwo = fals
 				secondMaxVal = val;
 			}
 		}
-		return vector<int>({ maxIndex,secondMaxIndex });
+		return vector<int>({ maxIndex, secondMaxIndex });
 	}
 	
 }
 
-void drawLineGraph(vector<float> data,Scalar color, int bin_w, Mat* drawingSurface,bool vertical = true)
+void drawLineGraph(vector<float> data,Scalar color, int bin_w, Mat* drawingSurface,bool vertical = true, float scale = 1.0)
 {
 	for (int i = 1; i < data.size(); i++)
 	{
-		Point p1 = vertical ? Point(bin_w * (i - 1), drawingSurface->rows - (data[i - 1])) : Point(cvRound(data[i - 1]), bin_w * (i - 1));
-		Point p2 = vertical ? Point(bin_w * (i), drawingSurface->rows - (data[i])) : Point(cvRound(data[i]), bin_w * (i));
-		line(*drawingSurface,p1,p2,color);
+		Point p1 = vertical ? Point(bin_w * (i - 1), drawingSurface->rows - (data[i - 1])) : Point(cvRound(data[i - 1] * scale), bin_w * (i - 1));
+		Point p2 = vertical ? Point(bin_w * (i), drawingSurface->rows - (data[i])) : Point(cvRound(data[i] * scale), bin_w * (i));
+		line(*drawingSurface,p1,p2,color,2);
 	}
 }
 
@@ -178,12 +222,16 @@ int main(int argc, char* argv[])
 	namedWindow("Control", WINDOW_AUTOSIZE);
 
 	int iAlpha = 9;
-	int iThreshold = 10;
+	int iHThreshold = 50;
+	int iVThreshold = 50;
 	createTrackbar("Alpha", "Control", &iAlpha, 10);
-	createTrackbar("Threshold", "Control", &iThreshold, 20);
+	createTrackbar("HThreshold", "Control", &iHThreshold, 100);
+	createTrackbar("VThreshold", "Control", &iVThreshold, 100);
 	int h_bins = 179, s_bins = 255, l_bins = 255;
 	/*END CONTROLS*/
 
+	int boxHistoryCount = 2;
+	vector<int> topHistory = vector<int>(boxHistoryCount), botHistory = vector<int>(boxHistoryCount), leftHistory = vector<int>(boxHistoryCount), rightHistory = vector<int>(boxHistoryCount);
 	while(true)
 	{
 		Mat frame;
@@ -195,19 +243,24 @@ int main(int argc, char* argv[])
 			break;
 		}
 
-		if (waitKey(300) == 27) break;
+		if (waitKey(1) == 27) break;
 
-		vector<Mat> hsv_planes;
-		Mat frameHSV;
-		cvtColor(frame, frameHSV, COLOR_BGR2HSV);
-		split(frameHSV, hsv_planes);
-		Mat hPlane = hsv_planes[0];
-		Mat lPlane = hsv_planes[2];
+		int topBorder = 1, bottomBorder = topBorder;
+		int leftBorder = 1, rightBorder = topBorder;
+
+		copyMakeBorder(frame, frame, topBorder, bottomBorder, leftBorder, rightBorder, BORDER_CONSTANT, Scalar(0, 0, 0));
+
+		vector<Mat> bgr_planes;
+		split(frame, bgr_planes);
+		Mat maxRGB = max(bgr_planes[2], max(bgr_planes[1], bgr_planes[0]));
+		Mat minRGB = min(bgr_planes[2], max(bgr_planes[1], bgr_planes[0]));
+		Mat lPlane = (maxRGB - minRGB);
+		imshow("lightness", lPlane);
 		
-		vector<float> luminanceRowAverages = vector<float>(lPlane.rows);
-		vector<float> luminanceColAverages = vector<float>(lPlane.cols);
+		vector<float> lightnessRow = vector<float>(lPlane.rows);
+		vector<float> lightnessCol = vector<float>(lPlane.cols);
 
-		for(int i = 0; i < luminanceRowAverages.size(); i++)
+		for(int i = 0; i < lightnessRow.size(); i++)
 		{
 			auto row = lPlane.row(i);
 			float total = 0;
@@ -217,10 +270,10 @@ int main(int argc, char* argv[])
 				float value = static_cast<float>(pixel);
 				total += value;
 			}
-			luminanceRowAverages[i] = total / row.cols;
+			lightnessRow[i] = total/row.cols;
 		}
 
-		for (int i = 0; i < luminanceColAverages.size(); i++)
+		for (int i = 0; i < lightnessCol.size(); i++)
 		{
 			auto col = lPlane.col(i);
 			float total = 0;
@@ -230,43 +283,67 @@ int main(int argc, char* argv[])
 				float value = static_cast<float>(pixel);
 				total += value;
 			}
-			luminanceColAverages[i] = total / col.rows;
+			lightnessCol[i] = total/col.rows;
 		}
 		
-
-		Mat outputFrame;
-		cvtColor(frameHSV, outputFrame, COLOR_HSV2BGR);
+		Mat outputFrame = frame.clone();
 		int graph_h = frame_height, graph_w = frame_width;
 
-		int h_bin_w = cvRound((double)graph_h / (double)luminanceRowAverages.size());
-		int v_bin_w = cvRound((double)graph_w / (double)luminanceColAverages.size());
+		int h_bin_w = cvRound((double)graph_h / (double)lightnessRow.size());
+		int v_bin_w = cvRound((double)graph_w / (double)lightnessCol.size());
 
-		vector<float> filteredRow = applyExponentialFilter(luminanceRowAverages, (iAlpha / 10.0));
-		vector<float> filteredCol = applyExponentialFilter(luminanceColAverages, (iAlpha / 10.0));
+		vector<float> filteredRow = applyExponentialFilter(lightnessRow, (iAlpha / 10.0));
+		vector<float> filteredCol = applyExponentialFilter(lightnessCol, (iAlpha / 10.0));
 		
 		drawLineGraph(filteredRow, Scalar(255, 0, 0), h_bin_w, &outputFrame, false);
 		drawLineGraph(filteredCol, Scalar(0, 0, 255), v_bin_w, &outputFrame, true);
 
-		vector<int> rowTriggers = changeDetect(filteredRow, (iThreshold / 10.0));
-		vector<int> colTriggers = changeDetect(filteredCol, (iThreshold / 10.0));
+		auto rowChange = changeValue(filteredRow);
+		auto colChange = changeValue(filteredCol);
 
-		int top = *min_element(rowTriggers.begin(),rowTriggers.end());
-		int bot = *max_element(rowTriggers.begin(), rowTriggers.end());
-		int left = *min_element(colTriggers.begin(), colTriggers.end());
-		int right = *max_element(colTriggers.begin(), colTriggers.end());
+		float rowThresh = calcThreshold(filteredRow,iHThreshold);
+		float colThresh = calcThreshold(filteredCol,iVThreshold);
+		
+		auto rowTriggers = changeDetect(rowChange, rowThresh);
+		auto colTriggers = changeDetect(colChange, colThresh);
 
-		Mat objMask = Mat(frameHSV.rows, frameHSV.cols, CV_8UC1,Scalar(0,0,0));
+		float historyAlpha = 0.2;
+		
+		topHistory[0] = topHistory[1];
+		topHistory[1] = rowTriggers[0];
+		topHistory[boxHistoryCount-1] = applyExponentialFilter(topHistory,historyAlpha)[boxHistoryCount-1];
+
+		botHistory[0] = botHistory[1];
+		botHistory[1] = rowTriggers[1];
+		botHistory[boxHistoryCount-1] = applyExponentialFilter(botHistory, historyAlpha)[boxHistoryCount-1];
+
+		leftHistory[0] = leftHistory[1];
+		leftHistory[1] = colTriggers[0];
+		leftHistory[boxHistoryCount - 1] = applyExponentialFilter(leftHistory, historyAlpha)[boxHistoryCount - 1];
+
+		rightHistory[0] = rightHistory[1];
+		rightHistory[1] = colTriggers[1];
+		rightHistory[boxHistoryCount - 1] = applyExponentialFilter(rightHistory, historyAlpha)[boxHistoryCount - 1];
+
+		int top = topHistory[boxHistoryCount - 1];
+		int bot = botHistory[boxHistoryCount - 1];
+		int left = leftHistory[boxHistoryCount - 1];
+		int right = rightHistory[boxHistoryCount - 1];
+
+		drawLineGraph(rowChange, Scalar(255, 115, 115), h_bin_w, &outputFrame, false,10);
+		drawLineGraph(colChange, Scalar(115, 115, 255), v_bin_w, &outputFrame, true,20);
+
+		Mat objMask = Mat(frame.rows, frame.cols, CV_8UC1,Scalar(0,0,0));
 		rectangle(objMask, Point(left, bot), Point(right, top), Scalar(255, 255,255),FILLED);
-		imshow("Object mask", objMask);
 		Mat justObject;
 		outputFrame.copyTo(justObject,objMask);
 		imshow("Just object", justObject);
 
-		line(outputFrame, Point(0, h_bin_w * top), Point(graph_w, h_bin_w * top), Scalar(0, 255, 0), 3);
-		line(outputFrame, Point(0, h_bin_w * bot), Point(graph_w, h_bin_w * bot), Scalar(0, 255, 0), 3);
+		line(outputFrame, Point(left, bot), Point(right, top), Scalar(0, 255, 0), 3);
+		line(outputFrame, Point(left, top), Point(right, bot), Scalar(0, 255, 0), 3);
 
-		line(outputFrame, Point(h_bin_w * left, 0), Point(h_bin_w * left, graph_h), Scalar(0, 255, 0), 3);
-		line(outputFrame, Point(h_bin_w * right, 0), Point(h_bin_w * right, graph_h), Scalar(0, 255, 0), 3);
+		//line(outputFrame, Point(h_bin_w * left, 0), Point(h_bin_w * left, graph_h), Scalar(0, 255, 0), 3);
+		//line(outputFrame, Point(h_bin_w * right, 0), Point(h_bin_w * right, graph_h), Scalar(0, 255, 0), 3);
 		
 		/*for(auto it = rowTriggers.begin(); it != rowTriggers.end(); ++it)
 		{
