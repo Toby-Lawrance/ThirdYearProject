@@ -56,50 +56,30 @@ bool Initialise_Camera(VideoCapture cap, VideoWriter& videoWriter, int& value1)
 	return false;
 }
 
-void graphing(int h_bins, int s_bins, int l_bins, vector<Mat> hsv_planes)
+Mat red(Mat bgrImg)
 {
-	int histSize[] = { h_bins, s_bins, l_bins };
+	vector<Mat> bgr_planes;
+	split(bgrImg, bgr_planes);
+	return max(bgr_planes[2] - 0.5 * bgr_planes[1] - 0.5 * bgr_planes[0],0);
+}
 
-	//Hue 0-179, sat 0-255, upper exclusive
-	float Histranges[] = { 0, 256 };
+Mat blue(Mat bgrImg)
+{
+	vector<Mat> bgr_planes;
+	split(bgrImg, bgr_planes);
+	return max(bgr_planes[1] - 0.5 * bgr_planes[0] - 0.5 * bgr_planes[0], 0);
+}
 
-	const float* ranges[] = { Histranges };
+Mat green(Mat bgrImg)
+{
+	vector<Mat> bgr_planes;
+	split(bgrImg, bgr_planes);
+	return max(bgr_planes[0] - 0.5 * bgr_planes[1] - 0.5 * bgr_planes[2], 0);
+}
 
-	bool uniform = true, accumulate = false;
-
-	vector<Mat> hsvHists = { Mat(), Mat(), Mat() };
-	for(int i = 0; i < hsv_planes.size(); i++)
-	{
-		calcHist(&hsv_planes[i], 1, 0, Mat(), hsvHists[i], 1, histSize, ranges, uniform, accumulate);
-	}
-
-	int hist_w = 512, hist_h = 400;
-	int h_bin_w = cvRound((double)hist_w / histSize[0]);
-	int s_bin_w = cvRound((double)hist_w / histSize[1]);
-	int l_bin_w = cvRound((double)hist_w / histSize[2]);
-	int bin_w[] = { h_bin_w, s_bin_w, l_bin_w };
-
-		
-	vector<Mat> histGraphs = { Mat(hist_h, hist_w, CV_8UC3, Scalar(0, 0, 0)), Mat(hist_h, hist_w, CV_8UC3, Scalar(0, 0, 0)),  Mat(hist_h, hist_w, CV_8UC3, Scalar(0, 0, 0)) };
-	for(int i = 0; i < histGraphs.size(); i++)
-	{
-		Scalar color;
-		switch(i)
-		{
-		case 0: color = Scalar(255, 0, 0); break;
-		case 1: color = Scalar(0, 255, 0); break;
-		case 2: color = Scalar(0, 0, 255); break;
-		}
-		normalize(hsvHists[i], hsvHists[i], 0, histGraphs[i].rows, NORM_MINMAX, -1, Mat());
-		for (int h = 1; h < histSize[i]; h++)
-		{
-			line(histGraphs[i], 
-			     Point(bin_w[i] *(h-1),hist_h - cvRound(hsvHists[i].at<float>(h-1))),
-			     Point(bin_w[i]*h,hist_h - cvRound(hsvHists[i].at<float>(h))),
-			     color);
-		}
-		imshow(("Graph" + std::to_string(i)), histGraphs[i]);
-	}
+Mat applyChannelFilter(Mat bgrImg)
+{
+	return max(red(bgrImg), max(green(bgrImg), blue(bgrImg)));
 }
 
 float calcThreshold(vector<float> data,float factor = 100.0)
@@ -153,17 +133,61 @@ vector<float> changeValue(vector<float> data)
 	return change_values;
 }
 
+vector<int> removeAdjacent(vector<int> data)
+{
+	std::sort(data.begin(), data.end());
+	vector<int> cleansed;
+	for(int i = 0; i < data.size()-1; ++i)
+	{
+		int val = data[i];
+		if (data[i + 1] == val + 1)
+		{
+			int j = i+1;
+			int last = val;
+			while(j < data.size() && data[j] == last + 1)
+			{
+				last = data[j];
+				j++;
+			}
+			int mid = ceil((last + val) / 2.0);
+			cleansed.push_back(mid);
+			i = j;
+		} else
+		{
+			cleansed.push_back(val);
+		}
+	}
+	return cleansed;
+}
+
+pair<int,int> getFQTQ(vector<int> data) //Get First and Third quartile
+{
+	if (data.size() == 0) { return pair<int, int>(0, 0); }
+	int fq,tq;
+	std::sort(data.begin(), data.end());
+	fq = (int)ceil(data.size() / 4.0);
+	tq = 3 * fq;
+
+	fq = fq < 0 ? 0 : fq;
+	fq = fq >= data.size() ? data.size() - 1 : fq;
+	tq = tq >= data.size() ? data.size() - 1 : tq;
+	cout << "FQ: " << fq << " TQ: " << tq << " DataSize:" << data.size() << endl;
+	return pair<int, int>(data[fq], data[tq]);
+}
+
 vector<int> changeDetect(vector<float> change_values, float threshold, bool topTwo = false)
 {
 	cout << "Threshold: " << threshold << endl;
 	if(!topTwo)
 	{
+		vector<int> triggerPoints;
 		int max = 0, min = change_values.size();
 		for (int i = 0; i < change_values.size(); ++i)
 		{
 			auto val = change_values[i];
 			if (val > threshold)
 			{
+				triggerPoints.push_back(i);
 				if(i > max)
 				{
 					max = i;
@@ -174,7 +198,8 @@ vector<int> changeDetect(vector<float> change_values, float threshold, bool topT
 				}
 			}
 		}
-		return vector<int>({ min, max });
+		//return vector<int>({ min, max });
+		return triggerPoints;
 	} else
 	{
 		int maxIndex = 0, secondMaxIndex = 0;
@@ -250,11 +275,13 @@ int main(int argc, char* argv[])
 
 		copyMakeBorder(frame, frame, topBorder, bottomBorder, leftBorder, rightBorder, BORDER_CONSTANT, Scalar(0, 0, 0));
 
+		
 		vector<Mat> bgr_planes;
 		split(frame, bgr_planes);
 		Mat maxRGB = max(bgr_planes[2], max(bgr_planes[1], bgr_planes[0]));
 		Mat minRGB = min(bgr_planes[2], max(bgr_planes[1], bgr_planes[0]));
-		Mat lPlane = (maxRGB - minRGB);
+		//Mat lPlane = (maxRGB - minRGB);
+		Mat lPlane = applyChannelFilter(frame);
 		imshow("lightness", lPlane);
 		
 		vector<float> lightnessRow = vector<float>(lPlane.rows);
@@ -305,24 +332,28 @@ int main(int argc, char* argv[])
 		float colThresh = calcThreshold(filteredCol,iVThreshold);
 		
 		auto rowTriggers = changeDetect(rowChange, rowThresh);
+		rowTriggers = removeAdjacent(rowTriggers);
+		auto rowBorders = getFQTQ(rowTriggers);
 		auto colTriggers = changeDetect(colChange, colThresh);
+		colTriggers = removeAdjacent(colTriggers);
+		auto colBorders = getFQTQ(colTriggers);
 
 		float historyAlpha = 0.2;
 		
 		topHistory[0] = topHistory[1];
-		topHistory[1] = rowTriggers[0];
+		topHistory[1] = rowBorders.first;//rowTriggers[0];
 		topHistory[boxHistoryCount-1] = applyExponentialFilter(topHistory,historyAlpha)[boxHistoryCount-1];
 
 		botHistory[0] = botHistory[1];
-		botHistory[1] = rowTriggers[1];
+		botHistory[1] = rowBorders.second;//rowTriggers[1];
 		botHistory[boxHistoryCount-1] = applyExponentialFilter(botHistory, historyAlpha)[boxHistoryCount-1];
 
 		leftHistory[0] = leftHistory[1];
-		leftHistory[1] = colTriggers[0];
+		leftHistory[1] = colBorders.first;//colTriggers[0];
 		leftHistory[boxHistoryCount - 1] = applyExponentialFilter(leftHistory, historyAlpha)[boxHistoryCount - 1];
 
 		rightHistory[0] = rightHistory[1];
-		rightHistory[1] = colTriggers[1];
+		rightHistory[1] = colBorders.second;//colTriggers[1];
 		rightHistory[boxHistoryCount - 1] = applyExponentialFilter(rightHistory, historyAlpha)[boxHistoryCount - 1];
 
 		int top = topHistory[boxHistoryCount - 1];
@@ -339,21 +370,21 @@ int main(int argc, char* argv[])
 		outputFrame.copyTo(justObject,objMask);
 		imshow("Just object", justObject);
 
-		line(outputFrame, Point(left, bot), Point(right, top), Scalar(0, 255, 0), 3);
-		line(outputFrame, Point(left, top), Point(right, bot), Scalar(0, 255, 0), 3);
+		line(outputFrame, Point(left, bot), Point(right, top), Scalar(255, 0, 0), 3);
+		line(outputFrame, Point(left, top), Point(right, bot), Scalar(255, 0, 0), 3);
 
 		//line(outputFrame, Point(h_bin_w * left, 0), Point(h_bin_w * left, graph_h), Scalar(0, 255, 0), 3);
 		//line(outputFrame, Point(h_bin_w * right, 0), Point(h_bin_w * right, graph_h), Scalar(0, 255, 0), 3);
 		
-		/*for(auto it = rowTriggers.begin(); it != rowTriggers.end(); ++it)
+		for(auto it = rowTriggers.begin(); it != rowTriggers.end(); ++it)
 		{
-			line(outputFrame, Point(0, h_bin_w * (*it)), Point(graph_w, h_bin_w * (*it)), Scalar(0, 255, 0), 3);
+			line(outputFrame, Point(0, h_bin_w * (*it)), Point(graph_w, h_bin_w * (*it)), Scalar(0, 255, 0), 1);
 		}
 
 		for (auto it = colTriggers.begin(); it != colTriggers.end(); ++it)
 		{
-			line(outputFrame, Point(h_bin_w * (*it),0), Point(h_bin_w * (*it),graph_h), Scalar(0, 255, 0), 3);
-		}*/
+			line(outputFrame, Point(h_bin_w * (*it),0), Point(h_bin_w * (*it),graph_h), Scalar(0, 255, 0), 1);
+		}
 		
 		//graphing(h_bins, s_bins, l_bins, hsv_planes);
 		
