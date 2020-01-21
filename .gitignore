@@ -14,4 +14,4 @@ CMakeFiles
 ./opencv/
 ./opencv_contrib/
 ./OpenCV-master-py3/
-
+build/
