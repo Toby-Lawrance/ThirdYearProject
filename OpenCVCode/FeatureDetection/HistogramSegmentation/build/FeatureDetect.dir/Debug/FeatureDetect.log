@@ -1,22 +1,22 @@
-﻿  FeatureDetect.cpp
-A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(37,17): warning C4244: '=': conversion from '_Tp' to 'float', possible loss of data
+﻿  Building Custom Rule A:/tobyl/Documents/Programming stuff/ThirdYearProject/OpenCVCode/FeatureDetection/HistogramSegmentation/CMakeLists.txt
+  Camera.hpp
+  imgProcessing.hpp
+  Objectdetection.hpp
+  UtilityPieces.hpp
+..\UtilityPieces.hpp(104,43): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+  FeatureDetect.cpp
+A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\possibleObject.hpp(24,17): warning C4244: '=': conversion from '_Tp' to 'float', possible loss of data
           with
           [
               _Tp=double
           ]
-A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(207,41): warning C4244: '=': conversion from 'float' to '_Ty', possible loss of data
-          with
-          [
-              _Ty=int
-          ]
-A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(239,12): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(253,9): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
-A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(256,47): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(257,47): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(279,47): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(280,47): warning C4267: '=': conversion from 'size_t' to 'int', possible loss of data
-A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(289,42): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
-A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(337,69): warning C4244: 'argument': conversion from '_Ty' to '_Tp', possible loss of data
+A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\UtilityPieces.hpp(104,43): warning C4267: 'initializing': conversion from 'size_t' to 'int', possible loss of data
+A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(118,74): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(119,74): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
+A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(127,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(128,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
+A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(187,20): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
+A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\Graph.hpp(29,62): warning C4244: 'argument': conversion from '_Ty' to '_Tp', possible loss of data
           with
           [
               _Ty=float
@@ -25,7 +25,8 @@ A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetectio
           [
               _Tp=int
           ]
-A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(338,65): warning C4244: 'argument': conversion from '_Ty' to '_Tp', possible loss of data
+A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(121): message : see reference to function template instantiation 'void Graph::drawLineGraph<float>(std::vector<float,std::allocator<float>>,cv::Scalar,bool,float)' being compiled
+A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\Graph.hpp(30,58): warning C4244: 'argument': conversion from '_Ty' to '_Tp', possible loss of data
           with
           [
               _Ty=float
@@ -34,9 +35,18 @@ A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetectio
           [
               _Tp=int
           ]
-A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(468,76): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(469,76): warning C4244: 'argument': conversion from 'double' to 'float', possible loss of data
-A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(477,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(478,47): warning C4244: 'argument': conversion from 'int' to 'float', possible loss of data
-A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(537,20): warning C4244: 'initializing': conversion from 'int' to 'float', possible loss of data
-  FeatureDetect.vcxproj -> A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\build\Debug\FeatureDetect.exe
+A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\UtilityPieces.hpp(51,13): warning C4244: 'initializing': conversion from 'double' to 'int', possible loss of data
+A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\FeatureDetect.cpp(131): message : see reference to function template instantiation 'std::vector<int,std::allocator<int>> utility::removeAdjacent<int>(std::vector<int,std::allocator<int>>)' being compiled
+  Generating Code...
+FeatureDetect.obj : error LNK2005: "bool __cdecl camera::Initialise_Camera(class cv::VideoCapture &,class cv::VideoWriter &,class cv::Mat &,int,int,int,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?Initialise_Camera@camera@@YA_NAEAVVideoCapture@cv@@AEAVVideoWriter@3@AEAVMat@3@HHHV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z) already defined in Camera.obj
+FeatureDetect.obj : error LNK2005: "class cv::Mat __cdecl imgProcessing::increaseDistance(class cv::Mat,double)" (?increaseDistance@imgProcessing@@YA?AVMat@cv@@V23@N@Z) already defined in imgProcessing.obj
+FeatureDetect.obj : error LNK2005: "class cv::Mat __cdecl imgProcessing::red(class cv::Mat)" (?red@imgProcessing@@YA?AVMat@cv@@V23@@Z) already defined in imgProcessing.obj
+FeatureDetect.obj : error LNK2005: "class cv::Mat __cdecl imgProcessing::blue(class cv::Mat)" (?blue@imgProcessing@@YA?AVMat@cv@@V23@@Z) already defined in imgProcessing.obj
+FeatureDetect.obj : error LNK2005: "class cv::Mat __cdecl imgProcessing::green(class cv::Mat)" (?green@imgProcessing@@YA?AVMat@cv@@V23@@Z) already defined in imgProcessing.obj
+FeatureDetect.obj : error LNK2005: "class cv::Mat __cdecl imgProcessing::applyChannelFilter(class cv::Mat)" (?applyChannelFilter@imgProcessing@@YA?AVMat@cv@@V23@@Z) already defined in imgProcessing.obj
+FeatureDetect.obj : error LNK2005: "class cv::Mat __cdecl imgProcessing::calculateLightness(class cv::Mat)" (?calculateLightness@imgProcessing@@YA?AVMat@cv@@V23@@Z) already defined in imgProcessing.obj
+FeatureDetect.obj : error LNK2005: "class cv::Mat __cdecl imgProcessing::applyMask(class cv::Mat,class cv::Mat)" (?applyMask@imgProcessing@@YA?AVMat@cv@@V23@0@Z) already defined in imgProcessing.obj
+FeatureDetect.obj : error LNK2005: "float __cdecl imgProcessing::calcThreshold(class std::vector<float,class std::allocator<float> >,float)" (?calcThreshold@imgProcessing@@YAMV?$vector@MV?$allocator@M@std@@@std@@M@Z) already defined in imgProcessing.obj
+FeatureDetect.obj : error LNK2005: "struct std::pair<class std::vector<float,class std::allocator<float> >,class std::vector<float,class std::allocator<float> > > __cdecl imgProcessing::calculateRowColumnHistograms(class cv::Mat)" (?calculateRowColumnHistograms@imgProcessing@@YA?AU?$pair@V?$vector@MV?$allocator@M@std@@@std@@V12@@std@@VMat@cv@@@Z) already defined in imgProcessing.obj
+FeatureDetect.obj : error LNK2005: "class std::vector<int,class std::allocator<int> > __cdecl utility::changeDetect(class std::vector<float,class std::allocator<float> >,float,bool)" (?changeDetect@utility@@YA?AV?$vector@HV?$allocator@H@std@@@std@@V?$vector@MV?$allocator@M@std@@@3@M_N@Z) already defined in UtilityPieces.obj
+A:\tobyl\Documents\Programming stuff\ThirdYearProject\OpenCVCode\FeatureDetection\HistogramSegmentation\build\Debug\FeatureDetect.exe : fatal error LNK1169: one or more multiply defined symbols found
