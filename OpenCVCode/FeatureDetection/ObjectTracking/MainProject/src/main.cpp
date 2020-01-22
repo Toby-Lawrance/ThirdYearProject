@@ -69,9 +69,9 @@ int main(int argc, char* argv[])
 	/*CONTROLS*/
 	namedWindow("Control", WINDOW_AUTOSIZE);
 	int distanceThresh = 40;
-	int iAlpha = 9;
-	int iHThreshold = 100;
-	int iVThreshold = 75;
+	int iAlpha = 7;
+	int iHThreshold = 50;
+	int iVThreshold = 40;
 	int contrastChange = 150;
 	createTrackbar("Alpha", "Control", &iAlpha, 10);
 	createTrackbar("HThreshold", "Control", &iHThreshold, 100);
@@ -92,6 +92,9 @@ int main(int argc, char* argv[])
 			break;
 		}
 
+		//Smooth?
+		//GaussianBlur(frame, frame, Size(11, 11), 0.1);
+		
 		if (waitKey(1) == 27) break;
 
 		int topBorder = 5, bottomBorder = topBorder;
@@ -178,21 +181,25 @@ int main(int argc, char* argv[])
 		}
 
 		vector<possibleObject> possible_objects;
-		for (int i = 0; i < intersects.size() - 1; ++i)
+		if(intersects.size() > 1)
 		{
-			Point x = intersects[i];
-			for (int j = i + 1; j < intersects.size(); ++j)
+			for (int i = 0; i < intersects.size() - 1; ++i)
 			{
-				Point y = intersects[j];
-				auto r = Rect(x, y);
-				float viewArea = outputFrame.cols * outputFrame.rows;
-				if (r.area() >= viewArea * 0.05) //5% of view, possibly too harsh?
+				Point x = intersects[i];
+				for (int j = i + 1; j < intersects.size(); ++j)
 				{
-					possible_objects.push_back(possibleObject(Rect(x, y)));
-				}
+					Point y = intersects[j];
+					auto r = Rect(x, y);
+					float viewArea = outputFrame.cols * outputFrame.rows;
+					if (r.area() >= viewArea * 0.05) //5% of view, possibly too harsh?
+					{
+						possible_objects.push_back(possibleObject(Rect(x, y)));
+					}
 
+				}
 			}
 		}
+		
 		std::sort(possible_objects.begin(), possible_objects.end());
 
 		auto middling = possible_objects;//unique(possible_objects.begin(), possible_objects.end());
@@ -209,30 +216,47 @@ int main(int argc, char* argv[])
 			}
 		}
 		std::sort(middling.begin(), middling.end());
-		middling = RemoveOverlaps(middling);
+		auto detectedObjects = RemoveOverlaps(middling);
 
+		const float degToRadMult = M_PI / 180.0;
+		const float HorizontalFOV = 70.42*degToRadMult;
+		const float VerticalFOV = 43.3*degToRadMult;
+		const float focalLength = 0.00367; //m
+		float blueObjectHeight = 0.118; //m
+		float blueObjectDepthWidth = 0.038; //m
 
 		Mat objMask = Mat(frame.rows, frame.cols, CV_8UC1, Scalar(0, 0, 0));
-		for (auto pO : middling)
+		for (auto it = detectedObjects.begin(); it != detectedObjects.end(); ++it)
 		{
 			//cout << "Avg Val: " << pO.avgVal << " for:" << pO.bounds << endl;
 			int xMax, yMax, xMin, yMin;
-			xMax = max(pO.bounds.tl().x, pO.bounds.br().x);
-			yMax = max(pO.bounds.tl().y, pO.bounds.br().y);
+			xMax = max(it->bounds.tl().x, it->bounds.br().x);
+			yMax = max(it->bounds.tl().y, it->bounds.br().y);
 
-			xMin = min(pO.bounds.tl().x, pO.bounds.br().x);
-			yMin = min(pO.bounds.tl().y, pO.bounds.br().y);
+			xMin = min(it->bounds.tl().x, it->bounds.br().x);
+			yMin = min(it->bounds.tl().y, it->bounds.br().y);
 
 			g.drawLine(Point(xMin, yMax), Point(xMax, yMin), Scalar(255, 0, 0), 3);
 			g.drawLine(Point(xMax, yMax), Point(xMin, yMin), Scalar(255, 0, 0), 3);
 
-			rectangle(objMask, pO.bounds, Scalar(255, 255, 255), FILLED);
+			rectangle(objMask, it->bounds, Scalar(255, 255, 255), FILLED);
+
+			//Attempt some depth perception
+			float estimateDepth = it->computeDistance(Size2f(blueObjectDepthWidth,blueObjectHeight),Size2f(frame.cols,frame.rows),Size2f(HorizontalFOV,VerticalFOV),focalLength)*100.0;
+			string depthMsg = std::to_string(estimateDepth) + "cm";
+			cout << "Estimated depth: " << depthMsg << endl;
+			int font = FONT_HERSHEY_SIMPLEX;
+			Size textSize = getTextSize(depthMsg, font, 1, 2, 0);
+			Point textLoc(it->bounds.x, it->bounds.y);
+			putText(g.drawing, depthMsg, textLoc, font, 1, Scalar::all(75), 2);
 		}
+		
 		Mat justObject = applyMask(frame, objMask);
 		imshow("Just object", justObject);
 		outputFrame += g.drawing;
 		imshow("Source image", outputFrame);
-		/*if(waitKey() == 27) break;
+		//if(waitKey() == 27) break;
+		 /*
 		for(int i = 0; i < 100; i++)
 		{
 			cout << endl;

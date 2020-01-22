@@ -14,6 +14,60 @@ float possibleObject::computeAvgVal(Mat img)
 	return avgVal;
 }
 
+float possibleObject::computeDistance(Size2f objSize, Size2f borderSize, Size2f FOVrad,float focalLength)
+{
+	const int xMax = max(bounds.tl().x, bounds.br().x);
+	const int yMax = max(bounds.tl().y, bounds.br().y);
+
+	const int xMin = min(bounds.tl().x, bounds.br().x);
+	const int yMin = min(bounds.tl().y, bounds.br().y);
+
+	const float xLength = (xMax - xMin) > (yMax - yMin) ? objSize.height : objSize.width;
+	const float yLength = (yMax - yMin) > (xMax - xMin) ? objSize.height : objSize.width;
+
+	const float xMaxAngle = (abs(xMax - (borderSize.width / 2)) / (borderSize.width)) * FOVrad.width;
+	const float xMinAngle = (abs(xMin - (borderSize.width / 2)) / (borderSize.width)) * FOVrad.width;
+
+	const float yMaxAngle = (abs(yMax - (borderSize.height / 2)) / borderSize.height) * FOVrad.height;
+	const float yMinAngle = (abs(yMin - (borderSize.height / 2)) / borderSize.height) * FOVrad.height;
+
+	const float x1 = (xMinAngle / (xMinAngle + xMaxAngle)) * xLength;
+	const float xTanMinAngle = tanf(xMinAngle);
+
+	const float y1 = (yMinAngle / (yMinAngle + yMaxAngle)) * yLength;
+	const float yTanMinAngle = tanf(yMinAngle);
+	
+	const float xDepth = abs((x1 - (focalLength * xTanMinAngle)) / xTanMinAngle);
+	const float yDepth = abs((y1 - (focalLength * yTanMinAngle)) / yTanMinAngle);
+
+	bool close = abs(xDepth - yDepth) / yDepth < 0.1;
+	if(close)
+	{
+		estimatedDistance = (xDepth + yDepth) / 2.0;
+		return estimatedDistance;
+	}
+
+	const bool xBordered = xMax == borderSize.width || xMin == 0;
+	const bool yBordered = yMax == borderSize.height || yMin == 0;
+
+	if(xBordered)
+	{
+		estimatedDistance = yDepth;
+		return estimatedDistance;
+	}
+
+	if(yBordered)
+	{
+		estimatedDistance = xDepth;
+		return estimatedDistance;
+	}
+
+	//Then one of them probably went wrong, pick the bigger one
+	estimatedDistance = max(xDepth, yDepth);
+	return estimatedDistance;
+}
+
+
 bool possibleObject::overlap(const possibleObject& other) const
 {
 	Point l1 = Point(min(bounds.tl().x, bounds.br().x), max(bounds.tl().y, bounds.br().y));

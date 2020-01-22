@@ -8,14 +8,16 @@ class possibleObject
 public:
 	Rect bounds;
 	float avgVal;
+	Size estimatedSize;
+	float estimatedDistance;
 
-	possibleObject(Rect _b) : bounds(_b), avgVal(0) {}
+	possibleObject(Rect _b) : bounds(_b), avgVal(0),estimatedDistance(0) {}
 
 	float computeAvgVal(Mat img);
+	float computeDistance(Size2f objSize, Size2f borderSize, Size2f FOVrad, float focalLength = 0.00367); //Units in metres
 
 	bool overlap(const possibleObject& other) const;
 
 	bool operator<(const possibleObject& other) const;
 	bool operator==(const possibleObject& other) const;
-
 };
