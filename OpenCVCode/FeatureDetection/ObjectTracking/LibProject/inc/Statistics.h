@@ -1,6 +1,8 @@
 #pragma once
 
 #include <vector>
+#define _USE_MATH_DEFINES
+#include <math.h>
 
 using namespace std;
 
@@ -95,16 +97,8 @@ pair<int, int> getFQTQ(vector<T> data) //Get First and Third quartile
 	return pair<int, int>(data[fq], data[tq]);
 }
 
-vector<int> changeDetect(vector<float> change_values, float threshold)
-{
-		vector<int> triggerPoints;
-		for (int i = 0; i < change_values.size(); ++i)
-		{
-			auto val = change_values[i];
-			if (val > threshold)
-			{
-				triggerPoints.push_back(i);
-			}
-		}
-		return triggerPoints;
-}
+vector<int> changeDetect(vector<float> change_values, float threshold);
+
+float degToRad(float ang);
+
+float radBound(float radAng);

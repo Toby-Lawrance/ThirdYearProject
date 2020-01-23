@@ -17,6 +17,7 @@
 #include <imgProcessing.h>
 #include <ObjectDetection.h>
 #include <Statistics.h>
+#include "Map.h"
 
 using namespace std;
 using namespace cv;
@@ -69,20 +70,29 @@ int main(int argc, char* argv[])
 	/*CONTROLS*/
 	namedWindow("Control", WINDOW_AUTOSIZE);
 	int distanceThresh = 40;
-	int iAlpha = 7;
+	int iAlpha = 8;
 	int iHThreshold = 50;
 	int iVThreshold = 40;
 	int contrastChange = 150;
+
+	int poseAngle = 0;
+	
 	createTrackbar("Alpha", "Control", &iAlpha, 10);
 	createTrackbar("HThreshold", "Control", &iHThreshold, 100);
 	createTrackbar("VThreshold", "Control", &iVThreshold, 100);
 	createTrackbar("DThreshold", "Control", &distanceThresh, 255);
 	createTrackbar("Contrast", "Control", &contrastChange, 200);
+	createTrackbar("Angle", "Control", &poseAngle, 360);
 	int h_bins = 179, s_bins = 255, l_bins = 255;
 	/*END CONTROLS*/
 
+	Map myMap;
+	Pose defaultPose;
+	
 	while (true)
 	{
+		defaultPose.heading = degToRad(poseAngle);
+		
 		Mat frame;
 		bool readSuccess = cap.read(frame);
 
@@ -91,9 +101,6 @@ int main(int argc, char* argv[])
 			cout << "Stream ended" << endl;
 			break;
 		}
-
-		//Smooth?
-		//GaussianBlur(frame, frame, Size(11, 11), 0.1);
 		
 		if (waitKey(1) == 27) break;
 
@@ -133,34 +140,9 @@ int main(int argc, char* argv[])
 
 		auto rowTriggers = changeDetect(rowChange, rowThresh);
 		rowTriggers = removeAdjacent<int>(rowTriggers);
-		//auto rowBorders = getFQTQ(rowTriggers);
 		auto colTriggers = changeDetect(colChange, colThresh);
 		colTriggers = removeAdjacent<int>(colTriggers);
-		//auto colBorders = getFQTQ(colTriggers);
-		/*
-		float historyAlpha = 0.2;
-
-		topHistory[0] = topHistory[1];
-		topHistory[1] = rowBorders.first;//rowTriggers[0];
-		topHistory[boxHistoryCount-1] = applyExponentialFilter(topHistory,historyAlpha)[boxHistoryCount-1];
-
-		botHistory[0] = botHistory[1];
-		botHistory[1] = rowBorders.second;//rowTriggers[1];
-		botHistory[boxHistoryCount-1] = applyExponentialFilter(botHistory, historyAlpha)[boxHistoryCount-1];
-
-		leftHistory[0] = leftHistory[1];
-		leftHistory[1] = colBorders.first;//colTriggers[0];
-		leftHistory[boxHistoryCount - 1] = applyExponentialFilter(leftHistory, historyAlpha)[boxHistoryCount - 1];
-
-		rightHistory[0] = rightHistory[1];
-		rightHistory[1] = colBorders.second;//colTriggers[1];
-		rightHistory[boxHistoryCount - 1] = applyExponentialFilter(rightHistory, historyAlpha)[boxHistoryCount - 1];
-
-		int top = topHistory[boxHistoryCount - 1];
-		int bot = botHistory[boxHistoryCount - 1];
-		int left = leftHistory[boxHistoryCount - 1];
-		int right = rightHistory[boxHistoryCount - 1];
-		*/
+		
 		g.drawLineGraph<float>(rowChange, Scalar(255, 115, 115), false, 10);
 		g.drawLineGraph<float>(colChange, Scalar(115, 115, 255), true, 50);
 
@@ -217,14 +199,39 @@ int main(int argc, char* argv[])
 		}
 		std::sort(middling.begin(), middling.end());
 		auto detectedObjects = RemoveOverlaps(middling);
+		
+		const float ObjectWidth = 0.038; //m
+		const float redObjectHeight = 0.079; //m
+		const float blueObjectHeight = 0.118; //m
+		const float yellowObjectHeight = ObjectWidth; //Cube
+		
+		Mat hsvFrame;
+		vector<Mat> hsvPlanes;
+		cvtColor(frame, hsvFrame, COLOR_BGR2HSV);
+		split(hsvFrame, hsvPlanes);
+		for (auto it = detectedObjects.begin(); it != detectedObjects.end(); ++it)
+		{
+			Mat mask = Mat(hsvPlanes[0].rows, hsvPlanes[0].cols, CV_8UC1, Scalar(0, 0, 0));
+			rectangle(mask, it->bounds, Scalar::all(255), FILLED);
+			float colour = mean(hsvPlanes[0], mask)[0];
 
-		const float degToRadMult = M_PI / 180.0;
-		const float HorizontalFOV = 70.42*degToRadMult;
-		const float VerticalFOV = 43.3*degToRadMult;
+			if (colour >= 140.0) //Probably quite blue
+			{
+				it->estimatedSize = Size2f(ObjectWidth, blueObjectHeight);
+			} else if(colour > 90.0)
+			{
+				it->estimatedSize = Size2f(ObjectWidth, redObjectHeight);
+			} else
+			{
+				it->estimatedSize = Size2f(ObjectWidth, yellowObjectHeight);
+			}
+		}
+
+		
+		const float HorizontalFOV = degToRad(70.42);
+		const float VerticalFOV = degToRad(43.3);
 		const float focalLength = 0.00367; //m
-		float blueObjectHeight = 0.118; //m
-		float blueObjectDepthWidth = 0.038; //m
-
+	
 		Mat objMask = Mat(frame.rows, frame.cols, CV_8UC1, Scalar(0, 0, 0));
 		for (auto it = detectedObjects.begin(); it != detectedObjects.end(); ++it)
 		{
@@ -242,25 +249,29 @@ int main(int argc, char* argv[])
 			rectangle(objMask, it->bounds, Scalar(255, 255, 255), FILLED);
 
 			//Attempt some depth perception
-			float estimateDepth = it->computeDistance(Size2f(blueObjectDepthWidth,blueObjectHeight),Size2f(frame.cols,frame.rows),Size2f(HorizontalFOV,VerticalFOV),focalLength)*100.0;
+			float estimateDepth = it->computeDistance(it->estimatedSize,Size2f(frame.cols,frame.rows),Size2f(HorizontalFOV,VerticalFOV),focalLength)*100.0;
+			myMap.addMeasurement(defaultPose, estimateDepth, it->maxMinAngles);
 			string depthMsg = std::to_string(estimateDepth) + "cm";
-			cout << "Estimated depth: " << depthMsg << endl;
+			//cout << "Estimated depth: " << depthMsg << endl;
 			int font = FONT_HERSHEY_SIMPLEX;
 			Size textSize = getTextSize(depthMsg, font, 1, 2, 0);
 			Point textLoc(it->bounds.x, it->bounds.y);
 			putText(g.drawing, depthMsg, textLoc, font, 1, Scalar::all(75), 2);
 		}
 		
-		Mat justObject = applyMask(frame, objMask);
-		imshow("Just object", justObject);
 		outputFrame += g.drawing;
 		imshow("Source image", outputFrame);
+		int scaling = 10;
+		Size displaySize = Size(myMap.map.cols*scaling,myMap.map.rows*scaling);
+		Mat displayMap;
+		resize(myMap.map, displayMap, displaySize);
+		cvtColor(displayMap, displayMap, COLOR_GRAY2RGB);
+		Point2f startPoint = Point2f((displayMap.cols / 2) + 1 + defaultPose.x, (displayMap.rows / 2) + 1 + defaultPose.y);
+		Point2f endPoint(startPoint.x + scaling * sin(defaultPose.heading), startPoint.y + scaling * cos(defaultPose.heading));
+		circle(displayMap, startPoint, scaling, Scalar(255, 0, 0));
+		line(displayMap, startPoint, endPoint, Scalar(255, 0, 0));
+		imshow("Map", displayMap);
 		//if(waitKey() == 27) break;
-		 /*
-		for(int i = 0; i < 100; i++)
-		{
-			cout << endl;
-		}*/
 	}
 	return 0;
 }

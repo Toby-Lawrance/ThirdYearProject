@@ -8,8 +8,9 @@ class possibleObject
 public:
 	Rect bounds;
 	float avgVal;
-	Size estimatedSize;
+	Size2f estimatedSize;
 	float estimatedDistance;
+	Size2f maxMinAngles;
 
 	possibleObject(Rect _b) : bounds(_b), avgVal(0),estimatedDistance(0) {}
 

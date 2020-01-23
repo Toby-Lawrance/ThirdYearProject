@@ -10,8 +10,7 @@ float possibleObject::computeAvgVal(Mat img)
 	Mat mask = Mat(img.rows, img.cols, CV_8UC1, Scalar(0, 0, 0));
 	rectangle(mask, bounds, Scalar::all(255), FILLED);
 	auto avg = mean(img, mask);
-	avgVal = avg[0];
-	return avgVal;
+	return avgVal = avg[0];
 }
 
 float possibleObject::computeDistance(Size2f objSize, Size2f borderSize, Size2f FOVrad,float focalLength)
@@ -25,9 +24,13 @@ float possibleObject::computeDistance(Size2f objSize, Size2f borderSize, Size2f 
 	const float xLength = (xMax - xMin) > (yMax - yMin) ? objSize.height : objSize.width;
 	const float yLength = (yMax - yMin) > (xMax - xMin) ? objSize.height : objSize.width;
 
-	const float xMaxAngle = (abs(xMax - (borderSize.width / 2)) / (borderSize.width)) * FOVrad.width;
-	const float xMinAngle = (abs(xMin - (borderSize.width / 2)) / (borderSize.width)) * FOVrad.width;
+	const float xMaxRelative = ((xMax - (borderSize.width / 2)) / (borderSize.width)) * FOVrad.width;
+	const float xMinRelative = ((xMin - (borderSize.width / 2)) / (borderSize.width)) * FOVrad.width;
 
+	maxMinAngles = Size2f(xMaxRelative, xMinRelative);
+	const float xMaxAngle = abs(xMaxRelative);
+	const float xMinAngle = abs(xMinRelative);
+	
 	const float yMaxAngle = (abs(yMax - (borderSize.height / 2)) / borderSize.height) * FOVrad.height;
 	const float yMinAngle = (abs(yMin - (borderSize.height / 2)) / borderSize.height) * FOVrad.height;
 
@@ -66,6 +69,7 @@ float possibleObject::computeDistance(Size2f objSize, Size2f borderSize, Size2f 
 	estimatedDistance = max(xDepth, yDepth);
 	return estimatedDistance;
 }
+
 
 
 bool possibleObject::overlap(const possibleObject& other) const
