@@ -5,6 +5,8 @@
 #include <opencv2/highgui.hpp>  // OpenCV window I/O
 #include <opencv2/features2d.hpp>
 
+const float possibleObject::maxRange = 50.0f;
+
 float possibleObject::computeAvgVal(Mat img)
 {
 	Mat mask = Mat(img.rows, img.cols, CV_8UC1, Scalar(0, 0, 0));
@@ -42,31 +44,26 @@ float possibleObject::computeDistance(Size2f objSize, Size2f borderSize, Size2f 
 	
 	const float xDepth = abs((x1 - (focalLength * xTanMinAngle)) / xTanMinAngle);
 	const float yDepth = abs((y1 - (focalLength * yTanMinAngle)) / yTanMinAngle);
-
+	
 	bool close = abs(xDepth - yDepth) / yDepth < 0.1;
 	if(close)
 	{
 		estimatedDistance = (xDepth + yDepth) / 2.0;
+		if (estimatedDistance > maxRange) { return -1; } //Out of range
 		return estimatedDistance;
 	}
-
 	const bool xBordered = xMax == borderSize.width || xMin == 0;
 	const bool yBordered = yMax == borderSize.height || yMin == 0;
 
-	if(xBordered)
+	if(xBordered || yBordered)
 	{
-		estimatedDistance = yDepth;
-		return estimatedDistance;
-	}
-
-	if(yBordered)
-	{
-		estimatedDistance = xDepth;
+		if (estimatedDistance > maxRange) { return -1; } //Out of range
 		return estimatedDistance;
 	}
 
 	//Then one of them probably went wrong, pick the bigger one
 	estimatedDistance = max(xDepth, yDepth);
+	if (estimatedDistance > maxRange) { return -1; } //Out of range
 	return estimatedDistance;
 }
 

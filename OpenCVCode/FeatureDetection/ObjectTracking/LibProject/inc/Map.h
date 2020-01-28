@@ -30,6 +30,8 @@ public:
 	
 	void addMeasurement(Pose currentPose, float depth, cv::Size2f& maxMinAngles);
 
+	cv::Mat getDisplayMap(Pose robotPose, float scale = 10) const;
+
 private:
 	void incrementPixel(int x, int y);
 	void drawLineLow(int x0, int y0, int x1, int y1);

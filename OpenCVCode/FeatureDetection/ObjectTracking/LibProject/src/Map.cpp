@@ -18,7 +18,9 @@ void Map::increaseSize(int additional)
 
 void Map::addMeasurement(Pose currentPose, float depth, Size2f& maxMinAngles)
 {
+	//TODO FIX FOR MOVING X & Y
 	int x = (map.cols / 2) + 1 + currentPose.x, y = (map.rows / 2) + 1 + currentPose.y;
+	cout << "X: " << x << " Y: " << y << endl;
 	const int distance = cvRound(depth);
 
 	while(x+distance > map.cols || x - distance < 0 || y + distance > map.rows || y - distance < 0)
@@ -31,21 +33,34 @@ void Map::addMeasurement(Pose currentPose, float depth, Size2f& maxMinAngles)
 	maxMinAngles.height *= -1;
 	
 	
-	int x0 = x + (depth * cos(currentPose.heading + maxMinAngles.width));
-	int y0 = y + (depth * sin(currentPose.heading + maxMinAngles.width));
-	int x1 = x + (depth * cos(currentPose.heading + maxMinAngles.height));
-	int y1 = y + (depth * sin(currentPose.heading + maxMinAngles.height));
+	int x0 = x + (depth * sin(currentPose.heading + maxMinAngles.width));
+	int y0 = y + (depth * cos(currentPose.heading + maxMinAngles.width));
+	int x1 = x + (depth * sin(currentPose.heading + maxMinAngles.height));
+	int y1 = y + (depth * cos(currentPose.heading + maxMinAngles.height));
 	
 	drawIncrementingLine(x0, y0, x1, y1);
 }
 
+cv::Mat Map::getDisplayMap(Pose robotPose, float scale) const
+{
+	const Size displaySize = Size(map.cols * scale, map.rows * scale);
+	Mat displayMap;
+	resize(map, displayMap, displaySize);
+	cvtColor(displayMap, displayMap, COLOR_GRAY2RGB);
+	Point2f startPoint = Point2f((displayMap.cols / 2) + 1 + robotPose.x, (displayMap.rows / 2) + 1 + robotPose.y);
+	Point2f endPoint(startPoint.x + scale * cos(robotPose.heading), startPoint.y + scale * sin(robotPose.heading));
+	circle(displayMap, startPoint, scale, Scalar(255, 0, 0));
+	line(displayMap, startPoint, endPoint, Scalar(255, 0, 0));
+	return displayMap;
+}
+
 void Map::incrementPixel(int x, int y)
 {
-	auto pixel = map.at<uchar>(x, y);
+	auto pixel = map.at<uchar>(x-1, y-1);
 	if(pixel < 255)
 	{
 		pixel = (pixel + 1);
-		map.at<uchar>(x, y) = pixel;
+		map.at<uchar>(x-1, y-1) = pixel;
 	}
 }
 
