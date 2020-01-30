@@ -31,12 +31,12 @@ int main(int argc, char* argv[])
 
 	int graph = 0;
 	
-	int x = 100 , y = 100;
+	int x = 50 , y = 50;
 	int poseAngle = 0;
 
 	createTrackbar("Graph", "Control", &graph, 1);
-	createTrackbar("X", "Control", &x, 200);
-	createTrackbar("Y", "Control", &y, 200);
+	createTrackbar("X", "Control", &x, 100);
+	createTrackbar("Y", "Control", &y, 100);
 	createTrackbar("Angle", "Control", &poseAngle, 360);
 	/*END CONTROLS*/
 
@@ -45,8 +45,8 @@ int main(int argc, char* argv[])
 	
 	while (true)
 	{
-		defaultPose.x = x - 100;
-		defaultPose.y = y - 100;
+		defaultPose.x = x - 50;
+		defaultPose.y = y - 50;
 		defaultPose.heading = degToRad(poseAngle);
 		
 		Mat frame;

@@ -13,6 +13,7 @@ public:
 	Pose(int _x, int _y, float _heading) : x(_x), y(_y), heading(_heading) {}
 
 	float rotateDeg(float angle);
+	std::string toString() const;
 };
 
 /*
@@ -37,4 +38,6 @@ private:
 	void drawLineLow(int x0, int y0, int x1, int y1);
 	void drawLineHigh(int x0, int y0, int x1, int y1);
 	void drawIncrementingLine(int x0, int y0, int x1, int y1);
+
+	cv::Point2f getMapCentre() const;
 };

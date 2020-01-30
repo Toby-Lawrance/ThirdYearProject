@@ -87,7 +87,7 @@ void ObjectDetector::processFrame(cv::Mat camFrame, Pose currentPose, bool drawG
 	std::sort(possible_objects.begin(), possible_objects.end());
 	auto detectedObjects = RemoveOverlaps(possible_objects);
 
-	const float ObjectWidth = 0.038; //m
+	const float ObjectWidth = 3.8; //cm
 
 	for (auto it = detectedObjects.begin(); it != detectedObjects.end(); ++it)
 	{
@@ -114,7 +114,7 @@ void ObjectDetector::processFrame(cv::Mat camFrame, Pose currentPose, bool drawG
 			it->estimatedSize = Size2f(width, ObjectWidth);
 		}
 
-		float estimateDepth = it->computeDistance(it->estimatedSize, Size2f(frame.cols, frame.rows), Size2f(HorizontalFOV, VerticalFOV), focalLength) * 100.0;
+		float estimateDepth = it->computeDistance(it->estimatedSize, Size2f(frame.cols, frame.rows), Size2f(HorizontalFOV, VerticalFOV), focalLength);
 		if(estimateDepth > 0.0)
 		{
 			it->estimatedDistance = estimateDepth;

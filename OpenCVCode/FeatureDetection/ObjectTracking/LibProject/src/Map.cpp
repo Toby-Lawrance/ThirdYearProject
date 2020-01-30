@@ -7,7 +7,7 @@ using namespace cv;
 
 Map::Map(int viewDistance)
 {
-	int size = 2 * viewDistance + 1;
+	int size = viewDistance % 2 == 1 ? viewDistance : viewDistance + 1;
 	map = Mat(size, size, CV_8UC1, Scalar(0, 0, 0));
 }
 
@@ -18,26 +18,25 @@ void Map::increaseSize(int additional)
 
 void Map::addMeasurement(Pose currentPose, float depth, Size2f& maxMinAngles)
 {
-	//TODO FIX FOR MOVING X & Y
-	int x = (map.cols / 2) + 1 + currentPose.x, y = (map.rows / 2) + 1 + currentPose.y;
-	cout << "X: " << x << " Y: " << y << endl;
+	Point2f origin = getMapCentre();
+	origin.x += currentPose.x;
+	origin.y += currentPose.y;
 	const int distance = cvRound(depth);
 
-	while(x+distance > map.cols || x - distance < 0 || y + distance > map.rows || y - distance < 0)
+	while(origin.x+distance > map.cols || origin.x - distance < 0 || origin.y + distance > map.rows || origin.y - distance < 0)
 	{
 		increaseSize(distance);
-		x = (map.cols / 2) + 1 + currentPose.x, y = (map.rows / 2) + 1 + currentPose.y;
+		//Reselect origin of drawing
+		origin = getMapCentre();
+		origin.x += currentPose.x;
+		origin.y += currentPose.y;
 	}
+	
+	const int x0 = origin.x + (depth * cos(currentPose.heading + maxMinAngles.width));
+	const int y0 = origin.y + (depth * sin(currentPose.heading + maxMinAngles.width));
+	const int x1 = origin.x + (depth * cos(currentPose.heading + maxMinAngles.height));
+	const int y1 = origin.y + (depth * sin(currentPose.heading + maxMinAngles.height));
 
-	maxMinAngles.width *= -1;
-	maxMinAngles.height *= -1;
-	
-	
-	int x0 = x + (depth * sin(currentPose.heading + maxMinAngles.width));
-	int y0 = y + (depth * cos(currentPose.heading + maxMinAngles.width));
-	int x1 = x + (depth * sin(currentPose.heading + maxMinAngles.height));
-	int y1 = y + (depth * cos(currentPose.heading + maxMinAngles.height));
-	
 	drawIncrementingLine(x0, y0, x1, y1);
 }
 
@@ -47,14 +46,17 @@ cv::Mat Map::getDisplayMap(Pose robotPose, float scale) const
 	Mat displayMap;
 	resize(map, displayMap, displaySize);
 	cvtColor(displayMap, displayMap, COLOR_GRAY2RGB);
-	Point2f startPoint = Point2f((displayMap.cols / 2) + 1 + robotPose.x, (displayMap.rows / 2) + 1 + robotPose.y);
+	Point2f startPoint = getMapCentre();
+	startPoint.x += robotPose.x;
+	startPoint.y += robotPose.y;
+	startPoint *= scale;
 	Point2f endPoint(startPoint.x + scale * cos(robotPose.heading), startPoint.y + scale * sin(robotPose.heading));
 	circle(displayMap, startPoint, scale, Scalar(255, 0, 0));
 	line(displayMap, startPoint, endPoint, Scalar(255, 0, 0));
 	return displayMap;
 }
 
-void Map::incrementPixel(int x, int y)
+void Map::incrementPixel(int y, int x) //Flip it because of dimensions
 {
 	auto pixel = map.at<uchar>(x-1, y-1);
 	if(pixel < 255)
@@ -142,7 +144,17 @@ void Map::drawIncrementingLine(int x0, int y0, int x1, int y1)
 	}
 }
 
+cv::Point2f Map::getMapCentre() const
+{
+	return Point2f((map.cols / 2) + 1, (map.rows / 2) + 1);
+}
+
 float Pose::rotateDeg(float angle)
 {
 	return heading = radBound(heading + degToRad(angle));
+}
+
+std::string Pose::toString() const
+{
+	return "(" + to_string(x) + "," + to_string(y) + "," + to_string(heading) + ")";
 }
