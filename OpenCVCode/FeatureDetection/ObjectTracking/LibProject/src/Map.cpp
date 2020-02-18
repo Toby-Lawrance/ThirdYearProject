@@ -144,6 +144,22 @@ void Map::drawIncrementingLine(int x0, int y0, int x1, int y1)
 	}
 }
 
+void Map::drawIncrementingPolygon(std::vector<cv::Point2f> vertices)
+{
+	if (vertices.size() < 3) { return; }
+	float miny = vertices[0].y, maxy = miny;
+	for(auto it = vertices.begin(); it != vertices.end(); ++it)
+	{
+		miny = min(miny, it->y);
+		maxy = max(maxy, it->y);
+	}
+
+	for(int y = miny; y <= maxy; y++)
+	{
+		
+	}
+}
+
 cv::Point2f Map::getMapCentre() const
 {
 	return Point2f((map.cols / 2) + 1, (map.rows / 2) + 1);

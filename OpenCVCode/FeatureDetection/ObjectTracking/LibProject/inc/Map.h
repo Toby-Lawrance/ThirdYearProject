@@ -34,10 +34,11 @@ public:
 	cv::Mat getDisplayMap(Pose robotPose, float scale = 10) const;
 
 private:
-	void incrementPixel(int x, int y);
+	void incrementPixel(int y, int x);
 	void drawLineLow(int x0, int y0, int x1, int y1);
 	void drawLineHigh(int x0, int y0, int x1, int y1);
 	void drawIncrementingLine(int x0, int y0, int x1, int y1);
+	void drawIncrementingPolygon(std::vector<cv::Point2f> vertices);
 
 	cv::Point2f getMapCentre() const;
 };

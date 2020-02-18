@@ -12,10 +12,10 @@ void ObjectDetector::processFrame(cv::Mat camFrame, Pose currentPose, bool drawG
 	copyMakeBorder(camFrame, frame, borderAdditional, borderAdditional, borderAdditional, borderAdditional, BORDER_CONSTANT, Scalar(0, 0, 0));
 
 	Mat lPlane = applyChannelFilter(frame) * contrastChange;
-	imshow("channeled", lPlane);
 	const Mat distant = increaseDistance(lPlane, distanceThreshold)*1.5;
-	lPlane = applyMask(lPlane, distant) ;
-	imshow("masked", lPlane);
+	lPlane = applyMask(lPlane, distant);
+	//Remove noise?
+	fastNlMeansDenoising(lPlane, lPlane);
 
 	auto rowCol = calculateRowColumnHistograms(lPlane);
 
